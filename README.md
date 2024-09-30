@@ -1,22 +1,198 @@
-# list
+# 프로젝트명
 
-https://eehd80.github.io/-setting/!list.html
+KRDS (https://uiux.egovframe.go.kr/) 템플릿
 
-## main
+## 프로젝트 구조
 
-https://eehd80.github.io/-setting/
+````bash
+📂 src/
+├── 📂 pages/                       # 페이지 HTML 파일들
+│   └── index.html                  # 메인 페이지 HTML 파일
+│   └── sub_02.html                  # 서브 페이지 HTML 파일
+├── 📂 resources/                   # 리소스 폴더
+│   ├── 📂 css/                     # 전역 CSS 파일들
+│   ├── 📂 images/                  # images 파일들
+│   ├── 📂 js/                      # JavaScript 파일들
+│   │   ├── 📂 component/           # 컴포넌트 관련 JS 파일 (특정한 기능을 수행하는 독립적인 UI요소)
+│   │   │   └── ui-script.js        # 컴포넌트 스크립트 (버튼, 모달창, 탭 등)
+│   │   ├── 📂 pattern/             # 패턴 관련 JS 파일 (반복적이거나 재사용 가능한 기능적 패턴)
+│   │   │   └── ui-pattern-script.js # UI 패턴 스크립트 (스크롤 이벤트, 슬라이드 등)
+│   ├── 📂 scss/                    # SCSS 파일들
+│   │   ├── 📂 component/           # 컴포넌트 관련 SCSS 파일
+│   │   │   ├── 📂 components/          # 컴포넌트 관련 SCSS 파일
+│   │   │   │   ├── _accordion.scss     # 아코디언 컴포넌트
+│   │   │   │   ├── _buttons.scss       # 버튼 스타일
+│   │   │   │   ├── _coach.scss         # 코치마크 스타일
+│   │   │   │   ├── _disclosure.scss    # 디스크로저 스타일
+│   │   │   │   ├── _fileupload.scss    # 파일 업로드 스타일
+│   │   │   │   ├── _helper.scss        # 헬퍼 텍스트 스타일
+│   │   │   │   ├── _lists.scss         # 리스트 스타일
+│   │   │   │   ├── _modal.scss         # 모달 스타일
+│   │   │   │   ├── _spinner.scss       # 스피너 스타일
+│   │   │   │   ├── _tables.scss        # 테이블 스타일
+│   │   │   │   ├── _tabs.scss          # 탭 스타일
+│   │   │   │   └── _tooltip.scss       # 툴팁 스타일
+│   │   │   ├── 📂 forms/               # 폼 관련 SCSS 파일
+│   │   │   │   ├── _checkbox.scss      # 체크박스 스타일
+│   │   │   │   ├── _datepicker.scss    # 데이트피커 스타일
+│   │   │   │   ├── _input.scss         # 인풋 필드 스타일
+│   │   │   │   ├── _layout.scss        # 폼 레이아웃 스타일
+│   │   │   │   ├── _radio.scss         # 라디오 버튼 스타일
+│   │   │   │   └── _select.scss        # 셀렉트박스 스타일
+│   │   │   ├── 📂 mixins/              # 믹스인 파일들
+│   │   │   │   ├── _breakpoints.scss    # 브레이크포인트 믹스인
+│   │   │   │   ├── _utils.scss         # 유틸리티 믹스인
+│   │   │   ├── _c_components.scss  # 컴포넌트 믹스인
+│   │   │   ├── _c_forms.scss       # 폼 믹스인
+│   │   │   ├── _c_initialize.scss  # 초기화 믹스인
+│   │   │   ├── _c_kds.scss         # KDS 믹스인
+│   │   │   ├── _colors.scss        # 색상 믹스인
+│   │   │   ├── _fonts.scss         # 폰트 믹스인
+│   │   │   ├── _include.scss       # 인클루드 스타일
+│   │   │   ├── _reset.scss         # 리셋 스타일
+│   │   │   ├── _root.scss          # 루트 스타일
+│   │   │   └── _variables.scss     # 변수 정의
+│   │   ├── 📂 pattern/             # 패턴 관련 SCSS 파일
+│   │   │   ├── _p_common.scss      # 공통 패턴 스타일
+│   │   │   ├── _p_content.scss     # 컨텐츠 관련 패턴 스타일
+│   │   │   └── _p_layout.scss      # 레이아웃 패턴 스타일
+```
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://app.netlify.com/sites/flamboyant-lumiere-482a1e/deploys)
+## 문자 인코딩(Character Encoding) 설정
 
-# Setting
+문자가 인코딩되는 방식을 설정합니다.
 
-프로젝트 시작시 사용할 수 있는 setting 파일입니다.
+```html
+<meta charset="UTF-8" />
+````
 
-[main(master) 브랜치로 이동](https://github.com/eehd80/-setting) <br/>
-[signin 브랜치로 이동](https://github.com/eehd80/-setting?files=1)
+-   `UTF-8`: 초성, 중성, 종성으로 구분하여 문자를 작성(권장)
+-   `EUC-KR`: 하나의 완성된 글자를 인식
 
-[list](https://eehd80.github.io/-setting/!list.html) <br/>
-[DEMO](https://eehd80.github.io/-setting/)
+## 뷰포트(Viewport) 렌더링 방식 설정
+
+웹페이지가 화면(Viewport)에 표현되는 방식을 설정합니다.<br>
+모바일 환경에서 적용됩니다.
+
+```html
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+/>
+```
+
+-   `width=device-width`: 화면의 가로 너비를 각 디바이스(Device)의 가로 너비와 동일하게 적용
+-   `initial-scale=1.0`: 화면의 초기 화면 배율(확대 정도)을 설정
+-   `user-scalable=no`: 사용자가 디바이스 화면을 확대(`yes`)/축소(`no`)할 수 있는지 설정
+-   `maximum-scale=1`: 사용자가 화면을 확대할 수 있는 최댓값
+-   `minimum-scale=1`: 사용자가 화면을 축소할 수 있는 최솟값
+
+## 오픈 그래프(The Open Graph protocol)
+
+웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
+
+Slack -
+
+<img width="549" alt="image" src="https://github.com/eehd80/-setting/assets/10627436/17b4a0bd-4630-4483-8e82-52c0b4eafdbe">
+
+KakaoTalk -
+
+<img width="246" alt="image" src="https://github.com/eehd80/-setting/assets/10627436/e4eeef46-fe12-410d-bf2e-7037a1b155ae">
+
+[더 많은 오픈 그래프 속성 보기](https://ogp.me/)
+
+```html
+<meta
+    property="og:type"
+    content="website"
+/>
+<meta
+    property="og:title"
+    content="페이지 제목"
+/>
+<meta
+    property="og:description"
+    content="페이지 설명"
+/>
+<meta
+    property="og:image"
+    content="http://www.mysite.com/article/article1_featured_image.jpg"
+/>
+<meta
+    property="og:url"
+    content="http://www.mysite.com/article/article1.html"
+/>
+```
+
+-   `og:type`: 페이지의 유형(E.g, `website`, `video.movie`)
+-   `og:site_name`: 속한 사이트의 이름
+-   `og:title`: 페이지의 이름(제목)
+-   `og:description`: 페이지의 간단한 설명
+-   `og:image`: 페이지의 대표 이미지 주소(URL)
+-   `og:url`: 페이지 주소(URL)
+
+## 트위터 카드(Twitter Cards)
+
+웹페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
+
+[더 많은 트위터 카드 보기](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
+
+```html
+<meta
+    name="twitter:card"
+    content="summary"
+/>
+<meta
+    name="twitter:title"
+    content="페이지 제목"
+/>
+<meta
+    name="twitter:description"
+    content="페이지 설명"
+/>
+<meta
+    name="twitter:image"
+    content="http://www.mysite.com/article/article1.html"
+/>
+<meta
+    name="twitter:domain"
+    content="사이트 명"
+/>
+```
+
+-   `twitter:card`: 페이지(카드)의 유형(E.g. `summary`, `player`)
+-   `twitter:site`: 속한 사이트의 이름
+-   `twitter:title`: 페이지의 이름(제목)
+-   `twitter:description`: 페이지의 간단한 설명
+-   `twitter:image`: 페이지의 대표 이미지 주소(URL)
+-   `twitter:url`: 페이지 주소(URL)
+
+## Favicon(파비콘, favorites icon)
+
+웹페이지를 나타내는 아이콘, 웹페이지의 로고를 설정합니다.<br>
+대부분의 경우 루트 경로에 `favicon.ico` 파일을 위치하면 자동으로 로딩하기 때문에 `<link />` 를 작성할 필요가 없습니다.
+`favicon.png` 파일을 사용하려면 다음과 같이 `<link />`를 작성하세요.
+
+> 파비콘 이미지는 루트 경로에 있어야 합니다!
+
+```html
+<!--<link rel="shortcut icon" href="favicon.ico" />-->
+<link
+    rel="icon"
+    href="./favicon.png"
+/>
+```
+
+-   `favicon.ico` 64 x 64 (px) 또는 32 x 32 또는 16 x 16
+-   `favicon.png` 500 x 500 (px)
+
+https://www.naver.com/favicon.ico?1
+
+### .ico 파일 제작
+
+이미지를 업로드하면 손쉽게 `.ico` 파일을 제작할 수 있습니다.
+
+[iconifier.net](https://iconifier.net/)
 
 ## Naming Case (BEM)
 
@@ -48,112 +224,15 @@ https://getbem.com/
 
 BEM이란? CSS 제작 방법론으로, 일종의 네이밍 컨벤션이라고 볼 수 있다. 개발, 디버깅, 유지보수를 위해 가능한 명확하게 네이밍하는 것이 그들의 목표이다.
 
-## 문자 인코딩(Character Encoding) 설정
-
-문자가 인코딩되는 방식을 설정합니다.
-
-```html
-<meta charset="UTF-8" />
-```
-
--   `UTF-8`: 초성, 중성, 종성으로 구분하여 문자를 작성(권장)
--   `EUC-KR`: 하나의 완성된 글자를 인식
-
-## 뷰포트(Viewport) 렌더링 방식 설정
-
-웹페이지가 화면(Viewport)에 표현되는 방식을 설정합니다.<br>
-모바일 환경에서 적용됩니다.
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-```
-
--   `width=device-width`: 화면의 가로 너비를 각 디바이스(Device)의 가로 너비와 동일하게 적용
--   `initial-scale=1.0`: 화면의 초기 화면 배율(확대 정도)을 설정
--   `user-scalable=no`: 사용자가 디바이스 화면을 확대(`yes`)/축소(`no`)할 수 있는지 설정
--   `maximum-scale=1`: 사용자가 화면을 확대할 수 있는 최댓값
--   `minimum-scale=1`: 사용자가 화면을 축소할 수 있는 최솟값
-
-## 오픈 그래프(The Open Graph protocol)
-
-웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
-
-Slack -
-
-<img width="549" alt="image" src="https://github.com/eehd80/-setting/assets/10627436/17b4a0bd-4630-4483-8e82-52c0b4eafdbe">
-
-KakaoTalk -
-
-<img width="246" alt="image" src="https://github.com/eehd80/-setting/assets/10627436/e4eeef46-fe12-410d-bf2e-7037a1b155ae">
-
-[더 많은 오픈 그래프 속성 보기](https://ogp.me/)
-
-```html
-<meta property="og:type" content="website" />
-<meta property="og:title" content="페이지 제목" />
-<meta property="og:description" content="페이지 설명" />
-<meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
-<meta property="og:url" content="http://www.mysite.com/article/article1.html" />
-```
-
--   `og:type`: 페이지의 유형(E.g, `website`, `video.movie`)
--   `og:site_name`: 속한 사이트의 이름
--   `og:title`: 페이지의 이름(제목)
--   `og:description`: 페이지의 간단한 설명
--   `og:image`: 페이지의 대표 이미지 주소(URL)
--   `og:url`: 페이지 주소(URL)
-
-## 트위터 카드(Twitter Cards)
-
-웹페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
-
-[더 많은 트위터 카드 보기](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
-
-```html
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="페이지 제목" />
-<meta name="twitter:description" content="페이지 설명" />
-<meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
-<meta name="twitter:domain" content="사이트 명" />
-```
-
--   `twitter:card`: 페이지(카드)의 유형(E.g. `summary`, `player`)
--   `twitter:site`: 속한 사이트의 이름
--   `twitter:title`: 페이지의 이름(제목)
--   `twitter:description`: 페이지의 간단한 설명
--   `twitter:image`: 페이지의 대표 이미지 주소(URL)
--   `twitter:url`: 페이지 주소(URL)
-
-## Favicon(파비콘, favorites icon)
-
-웹페이지를 나타내는 아이콘, 웹페이지의 로고를 설정합니다.<br>
-대부분의 경우 루트 경로에 `favicon.ico` 파일을 위치하면 자동으로 로딩하기 때문에 `<link />` 를 작성할 필요가 없습니다.
-`favicon.png` 파일을 사용하려면 다음과 같이 `<link />`를 작성하세요.
-
-> 파비콘 이미지는 루트 경로에 있어야 합니다!
-
-```html
-<!--<link rel="shortcut icon" href="favicon.ico" />-->
-<link rel="icon" href="./favicon.png" />
-```
-
--   `favicon.ico` 64 x 64 (px) 또는 32 x 32 또는 16 x 16
--   `favicon.png` 500 x 500 (px)
-
-https://www.naver.com/favicon.ico?1
-
-### .ico 파일 제작
-
-이미지를 업로드하면 손쉽게 `.ico` 파일을 제작할 수 있습니다.
-
-[iconifier.net](https://iconifier.net/)
-
 ## Reset.css
 
 각 브라우저의 기본 스타일을 초기화합니다.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />1₩ 111
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+/>1₩ 111
 ```
 
 ## Google Fonts
@@ -214,7 +293,10 @@ body {
 [Getting started for web](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 ```
 
 다음과 같이 사용할 수 있습니다.
@@ -231,7 +313,10 @@ body {
 
 ```html
 <!-- in HEAD -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <!-- in BODY -->
@@ -381,7 +466,10 @@ new ScrollMagic.Scene({
 
 ```html
 <!-- in HEAD -->
-<script defer src="./js/youtube.js"></script>
+<script
+    defer
+    src="./js/youtube.js"
+></script>
 
 <!-- in BODY -->
 <div id="player"></div>
@@ -417,4 +505,5 @@ function onYouTubePlayerAPIReady() {
     });
 }
 ```
+
 # -krds-html-scss-js
