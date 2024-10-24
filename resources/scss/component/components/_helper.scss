@@ -1,0 +1,205 @@
+/*  ***** 도움말 박스 *****  */
+.helper-area {
+  $w: 39rem;
+  @include position($p: fixed, $t: 0, $b: 0, $r: 0);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 60;
+  width: $w;
+  transition: $transition-base;
+  transform: translateX(100%);
+  .helper-wrap {
+    @include position($t: 0, $b: 0, $r: 0);
+    width: $w;
+    padding: 0 var(--spacer-10);
+    background-color: var(--gray-5);
+    border-left: 1px solid var(--gray-40);
+    transition: $transition-base;
+    .helper-tit {
+      padding-top: var(--spacer-10);
+      font-size: var(--fz-title-xlg);
+      font-weight: map-get($fws, bold);
+    }
+    .helper-conts-area {
+      @include flex-layout($jc: space-between, $fd: column);
+      gap: var(--spacer-10);
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: $transition-base;
+      .conts-area-wrap {
+        @include flex-layout($jc: space-between, $fd: column);
+        gap: var(--spacer-10);
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: $transition-base;
+      }
+      .conts-area {
+        .tit {
+          @include flex-layout($ai: center);
+          font-size: var(--fz-title-md);
+          font-weight: map-get($fws, bold);
+          .btn-ico {
+            margin-left: var(--spacer-1);
+          }
+        }
+        &.helper-conts {
+          width: 100%;
+          padding-top: 7rem;
+          .conts-wrap {
+            gap: var(--spacer-8);
+            .conts-desc {
+              @include flex-layout($fd: column);
+              gap: var(--spacer-2);
+            }
+          }
+        }
+        &.related-service {
+          padding: var(--spacer-10) 0;
+          background-color: var(--gray-5);
+          border-top: 1px solid var(--gray-40);
+          transition: $transition-base;
+          .conts-wrap {
+            gap: var(--spacer-6);
+          }
+        }
+      }
+
+      .helper-in {
+        width: 100%;
+        height: 100%;
+        padding: var(--spacer-11) 0 var(--spacer-10);
+        .helper-conts {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  &.expand {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    .btn-helper {
+      &.expand {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+.btn-helper {
+  @include position($p: fixed, $t: 4rem, $r: 4rem);
+  &.expand {
+    visibility: visible;
+    opacity: 1;
+    transition: $transition-base;
+    transform: translateX(0);
+  }
+}
+
+/* 도움말 버튼 */
+.btn {
+  &.btn-helper {
+    height: 4.4rem;
+    padding: 0 var(--btn-px-sm);
+    background-color: var(--gray-5);
+    border: 1px solid var(--gray-40);
+    border-radius: var(--rd-4);
+    box-shadow: $box-shadow-base;
+    font-size: var(--btn-fz-md);
+    color: var(--black);
+    &::before,
+    &::after {
+      @include pseudo();
+      width: 2rem;
+      height: 2rem;
+      background: url(#{$url}/component/common/ico_foldable.svg) no-repeat center;
+      background-size: contain;
+    }
+    &:focus {
+      @include focus($color: $primary);
+    }
+    &.expand {
+      &::before {
+        margin-right: var(--spacer-default2);
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &.fold {
+      &::before {
+        display: none;
+      }
+      &::after {
+        margin-left: var(--spacer-default2);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+//mobile only
+@include tabletLess {
+  /*  ***** 도움말 박스 *****  */
+  .helper-area {
+    $w: calc(100vw - 3rem);
+    position: fixed;
+    z-index: 71;
+    width: $w;
+
+    &::before {
+      @include position($p: fixed, $t: 0, $l: -3rem, $r: 0, $b: 0);
+      @include pseudo();
+      background: transparent;
+      transition: $transition-base;
+    }
+
+    .helper-wrap {
+      width: $w;
+      padding: 0 var(--spacer-4);
+      border-left: none;
+      .helper-conts-area {
+        .btn-helper {
+          top: 4rem;
+          right: 1.6rem;
+        }
+        .conts-area {
+          &.helper-conts {
+            .conts-wrap {
+              gap: var(--spacer-6);
+            }
+          }
+          &.related-service {
+            width: calc(100vw - 6.2rem);
+          }
+        }
+      }
+    }
+    &.expand {
+      &::before {
+        background: rgba(0, 0, 0, 0.6);
+        transition-delay: 0.3s;
+      }
+    }
+  }
+
+  .btn-helper {
+    top: 2.4rem;
+    right: 1.6rem;
+  }
+}
+
+//tablet size more
+@include tabletMore {
+  /*  ***** 도움말 박스 *****  */
+  .helper-area {
+    .helper-wrap {
+      .helper-conts-area {
+        @include scrollbar;
+      }
+    }
+  }
+}

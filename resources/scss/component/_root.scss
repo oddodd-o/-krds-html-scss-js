@@ -1,0 +1,103 @@
+:root {
+  //colors
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+  @each $num, $value in $primary-colors {
+    --primary-#{$num}: #{$value};
+  }
+  @each $num, $value in $secondary-colors {
+    --secondary-#{$num}: #{$value};
+  }
+  @each $num, $value in $point-colors {
+    --point-#{$num}: #{$value};
+  }
+  @each $num, $value in $gray-colors {
+    --gray-#{$num}: #{$value};
+  }
+
+  //fonts
+  @include fz();
+
+  //border radius size
+  @each $size, $value in $border-radius {
+    --rd-#{$size}: #{$value};
+  }
+
+  //btn setting
+  @include btn();
+  @include btn-chip(fill, lg);
+  @include btn-chip(outline, lg);
+
+  //form controls setting
+  @include input();
+  @include radio();
+  @include chk();
+  @include select();
+  @include switch();
+  @include form-chip(radio, lg);
+  @include form-chip(checkbox, lg);
+
+  //tab setting
+  @include tabs();
+
+  //@include spacer;
+  @include spacer(50);
+  @each $size, $value in $spacers {
+    --spacer-#{$size}: #{$value};
+  }
+}
+
+//responsive tablet
+@include tablet {
+  :root {
+  }
+}
+
+//responsive mobile
+@include tabletLess {
+  //font setting
+  $font-size: (
+    sizes: (
+      display: (
+        "sm": "2.5rem",
+        "md": "3.2rem",
+        "lg": "4rem",
+      ),
+      heading: (
+        "sm": "2.5rem",
+        "md": "3.2rem",
+        "lg": "4rem",
+      ),
+      title: (
+        "xxlg": "2.5rem",
+      ),
+    ),
+  ) !global;
+
+  /* input setting */
+  $inputs: (
+    setting: (
+      h: (
+        "xlg": "5.6rem",
+      ),
+      px: (
+        "xlg": "1.6rem",
+      ),
+      rd: (
+        "xlg": ".8rem",
+      ),
+      fz: (
+        "xlg": "1.9rem",
+      ),
+    ),
+  ) !global;
+
+  :root {
+    //fonts
+    @include fz();
+
+    /* input setting */
+    @include input();
+  }
+}

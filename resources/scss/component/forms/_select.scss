@@ -1,0 +1,38 @@
+/* select style */
+.form-select {
+  $size: lg;
+  width: 100%;
+  height: var(--select-h-#{$size});
+  padding: var(--select-pd-#{$size});
+  background-color: var(--white);
+  background-image: url(#{$url}/component/common/ico_select_#{$size}.svg);
+  background-repeat: no-repeat;
+  background-position: center right var(--select-rn-#{$size});
+  border: 1px solid var(--gray-60);
+  border-radius: var(--select-rd-#{$size});
+  font-family: inherit;
+  font-size: var(--select-fz-#{$size});
+  color: var(--gray-90);
+  opacity: 1;
+  &:focus {
+    border-color: var(--primary);
+    border-width: 2px;
+    outline-offset: -0.5rem;
+  }
+  &[disabled] {
+    background-color: var(--gray-30);
+    border-color: var(--gray-40);
+    color: var(--gray-60);
+  }
+  &.error {
+    border-color: var(--point);
+    border-width: 2px;
+  }
+}
+
+.is-error {
+  .form-select {
+    border-color: var(--point);
+    border-width: 2px;
+  }
+}

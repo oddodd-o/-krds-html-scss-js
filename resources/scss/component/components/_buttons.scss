@@ -1,0 +1,554 @@
+.btn {
+  //default : primary color height lg
+  $size: lg;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: auto;
+  height: get-btn-height($size);
+  padding: 0 get-btn-padding-x($size);
+  background-color: get-color("primary");
+  border: 1px solid get-color("primary");
+  border-radius: get-btn-border-radius($size);
+  font-size: get-btn-font-size($size);
+  color: get-color("white");
+  font-weight: map-get($fws, "normal");
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: get-transition("base");
+
+  &:hover {
+    background-color: get-color("primary", 60);
+    border-color: get-color("primary", 60);
+  }
+  &:active {
+    background-color: get-color("primary", 70);
+    border-color: get-color("primary", 70);
+  }
+  &:focus {
+    @include focus($color: get-color("white"), $alpha: 0.9);
+    transition: none;
+  }
+  &[disabled] {
+    background-color: get-color("gray", 30);
+    border-color: get-color("gray", 30);
+    color: get-color("gray", 60);
+    cursor: default;
+  }
+
+  //color
+  &.primary {
+    background-color: get-color("primary");
+    border: 1px solid get-color("primary");
+    color: get-color("white");
+    &:hover {
+      background-color: get-color("primary", 60);
+      border-color: get-color("primary", 60);
+    }
+    &:active {
+      background-color: get-color("primary", 70);
+      border-color: get-color("primary", 70);
+    }
+    &[disabled] {
+      background-color: get-color("gray", 30);
+      border-color: get-color("gray", 30);
+      color: get-color("gray", 60);
+    }
+  }
+  &.secondary {
+    background-color: get-color("white");
+    border: 1px solid get-color("primary");
+    color: get-color("primary", 60);
+    &:hover {
+      background-color: get-color("primary", 5);
+    }
+    &:active {
+      background-color: get-color("primary", 10);
+    }
+    &:focus {
+      @include focus($color: get-color("primary"));
+    }
+    &[disabled] {
+      background-color: get-color("gray", 30);
+      border-color: get-color("gray", 40);
+      color: get-color("gray", 60);
+    }
+    &.ico-arr-down {
+      &::after {
+        background-image: url(get-url("/component/common/ico_arr_20_down_blue.svg"));
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    &.active {
+      &.ico-arr-down {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &.tertiary {
+    background-color: get-color("white");
+    border: 1px solid get-color("gray", 90);
+    color: get-color("secondary", 90);
+    &:hover {
+      background-color: get-color("gray", 5);
+    }
+    &:active {
+      background-color: get-color("gray", 10);
+    }
+    &:focus {
+      @include focus($color: get-color("primary"));
+    }
+    &[disabled] {
+      background-color: get-color("gray", 30);
+      border-color: get-color("gray", 40);
+      color: get-color("gray", 60);
+    }
+  }
+
+  //txt + ico
+  &[class*="ico-"] {
+    &::after {
+      display: inline-flex;
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.ico-before {
+      &::before {
+        display: inline-flex;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &.ico-sch {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_sch_20_wh.svg"));
+    }
+  }
+  &.ico-arr {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_arr_20_right.svg"));
+    }
+  }
+  &.ico-upload {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_upload_20_wh.svg"));
+    }
+  }
+  &.xsm {
+    &[class*="ico-"] {
+      &::after {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  &.sm &[class*="ico-"] {
+    &::after {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.btn-ico {
+  @include btn-reset;
+  padding: 0 !important;
+  &:focus {
+    @include focus($offset: 0.4rem);
+  }
+  &[class*="ico-"] {
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &::after {
+      display: none;
+    }
+    &.md {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &.sm {
+      width: 2rem;
+      height: 2rem;
+    }
+    &.sm-m {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &.sm-l {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    &.xsm {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+  &.ico-sch {
+    background-image: url(get-url("/component/common/ico_sch_40.svg"));
+  }
+  &.ico-info {
+    background-image: url(get-url("/pattern/common/ico_info.svg"));
+    &.sm {
+      background-position: center;
+      background-size: 1.6rem;
+    }
+  }
+  &.ico-refresh {
+    border-radius: 10rem;
+    border: 0.1rem solid get-color("gray", 40);
+    background-color: get-color("white");
+    background-image: url(get-url("/component/common/ico_refresh_16.svg"));
+    background-size: 1.6rem;
+  }
+  &.ico-toggle-r {
+    border-radius: 10rem;
+    border: 0.1rem solid get-color("gray", 40);
+    background-color: get-color("white");
+    background-image: url(get-url("/component/common/ico_arr_16_down.svg"));
+    background-size: 1.6rem;
+  }
+  &.ico-pw-visible {
+    background-image: url(get-url("/component/common/ico_pw_visible.svg"));
+  }
+  &.ico-help {
+    background-image: url(get-url("/component/common/ico_help_24.svg"));
+  }
+  &.ico-page-prev {
+    border-radius: 10rem;
+    border: 0.1rem solid get-color("gray", 40);
+    background-color: get-color("white");
+    background-image: url(get-url("/component/common/ico_swiper_prev.svg"));
+    background-size: 2.4rem;
+    &.disabled {
+      background-color: get-color("secondary", 5);
+    }
+  }
+  &.ico-page-next {
+    border-radius: 10rem;
+    border: 0.1rem solid get-color("gray", 40);
+    background-color: get-color("white");
+    background-image: url(get-url("/component/common/ico_swiper_next.svg"));
+    background-size: 2.4rem;
+    &.disabled {
+      background-color: get-color("secondary", 5);
+    }
+  }
+}
+
+.btn-txt {
+  @include btn-reset;
+  padding: 0 get-spacer("default2") !important;
+  &:hover {
+    background-color: get-color("secondary", 5);
+  }
+  &:active {
+    background-color: get-color("secondary", 10);
+  }
+  &:focus {
+    @include focus($offset: 0.4rem);
+  }
+  &[disabled] {
+    color: get-color("gray", 50);
+  }
+  &[class*="ico-"] {
+    &::after {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &.ico-before {
+      &::before {
+        display: inline-flex;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &.ico-call {
+      &::before {
+        background-image: url(get-url("/component/common/ico_call.svg"));
+      }
+      &::after {
+        background-image: url(get-url("/component/common/ico_call.svg"));
+      }
+    }
+    &.ico-faq {
+      &::before {
+        background-image: url(get-url("/component/common/ico_faq.svg"));
+      }
+      &::after {
+        background-image: url(get-url("/component/common/ico_faq.svg"));
+      }
+    }
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &.link {
+    height: auto;
+    text-decoration: underline !important;
+  }
+  &.ico-like {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_like_20.svg"));
+    }
+  }
+  &.ico-share {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_share_20.svg"));
+    }
+  }
+  &.ico-arr {
+    &::after {
+      background-image: url(get-url("/component/common/ico_arr_20_right.svg"));
+    }
+  }
+  &.ico-arr-down {
+    &::after {
+      background-image: url(get-url("/component/common/ico_arr_16_down.svg"));
+    }
+  }
+  &.ico-more {
+    &::after {
+      background-image: url(get-url("/component/common/ico_arr1_20_right.svg"));
+    }
+  }
+  &.ico-sch {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_sch_40.svg"));
+    }
+  }
+  &.ico-sch1 {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_sch1_20.svg"));
+    }
+  }
+  &.ico-go {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_go_20.svg"));
+    }
+  }
+  &.ico-down {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_file_20.svg"));
+    }
+  }
+  &.ico-filter {
+    position: relative;
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_filter_20.svg"));
+    }
+    .num {
+      display: inline-flex;
+      position: absolute;
+      right: 0.1rem;
+      z-index: 1;
+      height: 2rem;
+      font-size: get-font-size("label", "sm");
+      color: get-color("white");
+      padding: 0 get-spacer("2");
+      margin-top: -3rem;
+      border-radius: 2rem;
+      background-color: get-color("primary");
+    }
+  }
+  &.ico-reset {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_refresh_16.svg"));
+    }
+  }
+  &.ico-log {
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_login_20.svg"));
+    }
+  }
+  &.ico-func {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_arr_func_20.svg"));
+    }
+  }
+  &.ico-logout {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_logout_16.svg"));
+    }
+  }
+  &.ico-email {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_email_20.svg"));
+    }
+  }
+  &.ico-print {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_print_20.svg"));
+    }
+  }
+  &.ico-scrap {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_scrap_20.svg"));
+    }
+  }
+  &.ico-del {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_del1_20.svg"));
+    }
+  }
+  &.ico-plus {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_plus_24.svg"));
+    }
+  }
+  &.ico-setting {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_setting_20.svg"));
+    }
+  }
+  &.ico-link {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_link_16.svg"));
+    }
+  }
+  &.ico-comment {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico_comment_16.svg"));
+    }
+  }
+  &.ico-prev {
+    gap: get-spacer("2");
+    &::before,
+    &::after {
+      background-image: url(get-url("/component/common/ico-prev_24.svg"));
+    }
+  }
+  &.sm {
+    &[class*="ico-"] {
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  &.xsm {
+    &[class*="ico-"] {
+      gap: get-spacer("default2");
+      &::before,
+      &::after {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  &.h-auto {
+    height: auto;
+    padding: get-spacer("default2") !important;
+  }
+}
+
+.link-txt {
+  text-decoration: underline;
+}
+
+.btn-chip-fill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: get-color("gray", 10);
+  &:hover {
+    background-color: get-color("secondary", 5);
+  }
+  &:active {
+    background-color: get-color("secondary", 10);
+  }
+  &[disabled],
+  &.disabled {
+    background-color: get-color("gray", 30);
+  }
+}
+
+.btn-chip-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.2rem;
+  background-color: get-color("white");
+  border: 0.1rem solid get-color("gray", 40);
+  &:hover {
+    background-color: get-color("secondary", 5);
+  }
+  &:active {
+    background-color: get-color("secondary", 10);
+  }
+  &:disabled,
+  &.disabled {
+    background-color: get-color("gray", 30);
+  }
+}
+
+.btn-wrap {
+  width: 100%;
+}
+
+@include mobile {
+  .btn-ico {
+    &[class*="ico-"] {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

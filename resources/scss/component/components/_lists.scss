@@ -1,0 +1,75 @@
+.info-list {
+  > li {
+    position: relative;
+    padding-left: var(--spacer-3);
+    color: var(--gray-70);
+    &::before {
+      @include position($t: 0, $l: 0);
+    }
+    & + li {
+      margin-top: var(--spacer-4);
+    }
+    > .info-list {
+      //2depth
+      margin-top: var(--spacer-3);
+      > li {
+        padding-left: var(--spacer-4);
+        & + li {
+          margin-top: var(--spacer-2);
+        }
+        > .info-list {
+          //3depth
+          font-size: var(--fz-body-sm);
+          > li {
+            padding-left: var(--spacer-3);
+          }
+        }
+      }
+    }
+    > .info-txt {
+      margin-top: var(--spacer-3);
+    }
+  }
+  &.decimal {
+    > li {
+      &::before {
+        content: "\2022"; //bullet
+      }
+    }
+  }
+  &.dash {
+    > li {
+      &::before {
+        content: "\002D"; //hyphen-minus
+      }
+    }
+  }
+  &.ordered {
+    > li {
+      padding-left: var(--spacer-6);
+      .num {
+        @include position($t: 0, $l: 0);
+      }
+      &::before {
+        display: none;
+      }
+      > .ordered {
+        //2depth
+        > li {
+          padding-left: var(--spacer-6);
+          > .ordered {
+            //3depth
+            > li {
+              padding-left: var(--spacer-4);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.txt-refer {
+  //참고 또는 info성 텍스트
+  margin-top: var(--spacer-5);
+  color: var(--gray-70);
+}

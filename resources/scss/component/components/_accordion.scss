@@ -1,0 +1,47 @@
+.accordion {
+  border-top: 1px solid var(--gray-40);
+}
+.accordion-item {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-40);
+  .btn-accordion {
+    position: relative;
+    width: 100%;
+    min-height: 6.4rem;
+    padding: var(--spacer-5) var(--spacer-10) var(--spacer-5) 0;
+    font-size: var(--fz-body-lg);
+    font-weight: map-get($fws, bold);
+    text-align: left;
+    &::after {
+      @include position($t: 2.2rem, $r: 0);
+      @include pseudo();
+      width: 2.4rem;
+      height: 2.4rem;
+      background: url(#{$url}/component/common/ico_arr_accordion.svg) no-repeat center;
+      background-size: 2rem;
+      transition: $transition-base;
+      transform: rotate(0deg);
+    }
+    &.active {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  }
+  &.active {
+    .accordion-collapse {
+      height: auto;
+      max-height: 1000vh;
+      transition: max-height 1.5s ease-in-out;
+    }
+  }
+  .accordion-body {
+    padding-top: var(--spacer-1);
+    padding-bottom: var(--spacer-5);
+  }
+}

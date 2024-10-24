@@ -1,0 +1,210 @@
+//default
+.modal-back,
+.modal {
+  display: none;
+  visibility: hidden;
+  z-index: -1;
+  &.in {
+    visibility: visible;
+  }
+}
+.modal-back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparentize($black, 0.25);
+  //opacity: 0;
+  //transition: visibility 0s .3s;
+  &.in {
+    display: block;
+    z-index: 1000;
+  }
+}
+.modal {
+  /*@include flex-layout($ai: center, $jc: center, $fd: column);*/
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  @include reset-text;
+  transition:
+    visibility 0.15s 0.3s,
+    z-index 0s 0.3s,
+    opacity 0.2s;
+  > * {
+    width: 100%;
+  }
+  &.in {
+    z-index: 1010;
+    transition-delay: 0s;
+    opacity: 1;
+  }
+  &.shown {
+    display: block;
+  }
+
+  .modal-dialog {
+    //기본 타입
+    $p: var(--spacer-10);
+    $gap: var(--spacer-8);
+    $m: var(--spacer-20);
+    @include flex-layout($ai: center);
+    position: relative;
+    z-index: 1020;
+    width: 84.6rem;
+    height: calc(100% - $m * 2);
+    min-height: calc(100% - $m * 2);
+    margin: $m auto;
+    .modal-content {
+      @include flex-layout($ai: center, $fd: column);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-height: 100%;
+      background-color: var(--white);
+      border-radius: var(--rd-12);
+      outline-color: transparent;
+      transition: outline-color 0.1s;
+      > * {
+        width: 100%;
+      }
+      &:focus {
+        @include focus($offset: 0.4rem, $color: $white, $alpha: 0.9);
+      }
+    }
+    .modal-header {
+      width: 100%;
+      padding: $p 6.8rem $gap $p;
+      background-color: inherit;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      .modal-title {
+        @include ellipsis(1);
+        font-size: var(--fz-title-sm);
+        font-weight: map-get($fws, bold);
+      }
+    }
+    .modal-conts {
+      @include flex-layout($fd: column);
+      gap: $gap;
+      position: relative;
+      overflow-y: auto;
+      width: 100%;
+      padding: 0 $p;
+      color: var(--gray-90);
+      > * {
+        width: 100%;
+      }
+
+      .conts-tit {
+        font-size: var(--fz-title-md);
+        font-weight: map-get($fws, bold);
+      }
+      .conts-area {
+        @include flex-layout($fd: column);
+        gap: $gap;
+        > * {
+          width: 100%;
+        }
+      }
+    }
+    .modal-btn {
+      @include flex-layout($ai: center, $jc: flex-end);
+      gap: 0.8rem;
+      width: 100%;
+      padding: $gap $p $p;
+      .btn {
+        min-width: 9.2rem;
+      }
+    }
+    .btn-close {
+      @include position($t: 3.2rem, $r: 3.2rem);
+      z-index: 901;
+      width: 3.6rem;
+      height: 3.6rem;
+      background: url(#{$url}/component/common/ico_close_modal.svg) no-repeat center;
+      background-size: 2rem;
+    }
+  }
+  &.alert {
+    //얼럿 타입
+    .modal-dialog {
+      width: 56rem;
+      .modal-conts {
+        gap: 2.4rem;
+      }
+      .modal-btn {
+        .btn {
+          min-width: 7.8rem;
+        }
+      }
+    }
+  }
+}
+
+/* modal open 시 contents (전체모달 아닌경우) */
+.modal-open {
+  /*padding-right: 17px;*/
+  overflow: hidden;
+}
+
+/* mobile */
+@include mobile {
+  .modal {
+    $w: calc(100% - 3.2rem);
+    .modal-dialog {
+      $p: var(--spacer-6);
+      $gap: var(--spacer-6);
+      $m: var(--spacer-4);
+      width: $w;
+      height: calc(100% - $m * 2);
+      min-height: calc(100% - $m * 2);
+      margin: $m auto;
+      .modal-header {
+        padding: $p 6.8rem $gap $p;
+      }
+      .modal-conts {
+        gap: $gap;
+        padding: 0 $p;
+        .conts-area {
+          gap: $gap;
+          > * {
+            width: 100%;
+          }
+        }
+      }
+      .modal-btn {
+        padding: $gap $p $p;
+        .btn {
+          width: calc((100% - 0.8rem) / 2);
+          min-width: 0;
+        }
+      }
+      .btn-close {
+        @include position($t: 1.6rem, $r: 1.6rem);
+      }
+    }
+    &.alert {
+      .modal-dialog {
+        width: $w;
+        .modal-btn {
+          .btn {
+            width: auto;
+            min-width: 7.8rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/* 
+ * name : Radio Css
+ * date : 2024-01-03
+ */
+
+/* **** radio : chip type **** */
+.form-chip {
+  .radio {
+    ~ .form-chip-outline {
+      &::before {
+        display: inline-flex;
+        content: "";
+      }
+    }
+    &:focus {
+      ~ .form-chip-outline {
+        @include focus(-0.4rem);
+        border-radius: var(--chkChipOutline-rd-lg);
+      }
+    }
+  }
+  &.md {
+    .radio {
+      &:focus {
+        ~ .form-chip-outline {
+          border-radius: var(--chkChipOutline-rd-md);
+        }
+      }
+    }
+  }
+  &.sm {
+    .radio {
+      &:focus {
+        ~ .form-chip-outline {
+          border-radius: var(--chkChipOutline-rd-sm);
+        }
+      }
+    }
+  }
+}

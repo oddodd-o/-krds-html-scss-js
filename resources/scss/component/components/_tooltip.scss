@@ -1,0 +1,126 @@
+.krds-tooltip-wrap {
+	display: inline-flex;
+	position: relative;
+	.tool-txt {
+		@include flex-layout($ai:center);
+		gap: var(--krds-spacer-1);
+		font-size: var(--krds-fz-body-sm);
+	}
+	.tool-btn {
+		@include flex-layout($ai:center);
+		gap: var(--krds-spacer-1);
+		&::after {
+			display: inline-flex;
+			content:'';
+			width: 2rem;
+			height: 2rem;
+			background: url(#{$url}/component/common/ico_tooltip_20.svg) no-repeat center;
+			background-size: contain;
+		}
+	}
+	.tool-in {
+		display: none;
+		position: absolute;
+		z-index: 3;
+		font-size: var(--krds-fz-body-sm);
+		width: 56rem;
+		padding: var(--krds-spacer-6);
+		border-radius: var(--krds-rd-6);
+		border: .1rem solid var(--krds-gray-40);
+		background-color: var(--krds-white);
+		&::before {
+			display: inline-flex;
+			content:'';
+			position: absolute;
+			z-index: 4;
+			width: 2.2rem;
+			height: 1.2rem;
+			background: url(#{$url}/component/common/ico_tool_arr.svg) no-repeat center;
+			background-size: contain;
+		}
+		.tool-hd {
+			@include flex-layout($jc: space-between, $ai: center);	
+			gap: var(--krds-spacer-4);
+			
+		}
+        .tool-tit {
+            flex: 1;
+            @include ellipsis(1);
+            padding-right: var(--krds-spacer-10);
+        }
+		.tool-close {
+			display: inline-flex;
+            position: absolute;
+            top: var(--krds-spacer-3);
+            right: var(--krds-spacer-3);
+			width: 4rem;
+			height: 4rem;
+			background: url(#{$url}/component/common/ico_del_20.svg) no-repeat center;
+		}
+		.tool-cnt {
+			@include flex-layout($fd:column, $ai: normal);	
+			gap: var(--krds-spacer-6);
+			margin-top: var(--krds-spacer-4);
+		}
+       
+	}
+    &.left {
+        .tool-in {
+            left: 0;
+            &::before {
+                left: var(--krds-spacer-6);
+            }
+        }
+    }
+    &.center {
+        .tool-in {
+            left:50%;
+            transform: translateX(-50%);
+            &::before {
+                left: 50%;
+                margin-left: -1.1rem;
+            }
+        }
+    }
+    &.right {
+        .tool-in {
+            right: 0;
+            &::before {
+                right: var(--krds-spacer-6);
+            }
+        }
+    }
+    &.top {
+        .tool-in { 
+            bottom: 100%;
+            margin-bottom: var(--krds-spacer-3);
+            &::before {
+                top: 100%;
+            }
+        }
+        
+    }
+    &.bottom {
+        .tool-in { 
+            top: 100%;
+            margin-top: var(--krds-spacer-3);
+            &::before {
+                bottom: 100%;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+
+@include mobile {
+    .krds-tooltip-wrap { 
+        .tool-in {
+            width: auto !important;
+            // margin: 0 1.6rem;
+            transform: none !important;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,810 @@
+//colors
+$white: #fff !default;
+$black: #000 !default;
+$gray: #8e8e8e !default;
+$primary: #246beb !default;
+$secondary: #003675 !default;
+$point: #e71825 !default;
+$danger: #eb003b !default;
+$warning: #ffb724 !default;
+$success: #008a1e !default;
+$information: #2768ff !default;
+$colors: (
+  "white": $white,
+  "black": $black,
+  "primary": $primary,
+  "secondary": $secondary,
+  "point": $point,
+  "danger": $danger,
+  "warning": $warning,
+  "success": $success,
+  "information": $information,
+);
+
+//primary colors
+$primary-5: #eff5ff !default;
+$primary-10: #d3e1fb !default;
+$primary-20: #a7c4f7 !default;
+$primary-30: #7ca6f3 !default;
+$primary-40: #5089ef !default;
+$primary-60: #1d56bc !default;
+$primary-70: #16408d !default;
+$primary-80: #0e2b5e !default;
+$primary-90: #07152f !default;
+
+$primary-colors: (
+  "5": $primary-5,
+  "10": $primary-10,
+  "20": $primary-20,
+  "30": $primary-30,
+  "40": $primary-40,
+  "60": $primary-60,
+  "70": $primary-70,
+  "80": $primary-80,
+  "90": $primary-90,
+) !default;
+
+//secondary colors
+$secondary-5: #edf1f5 !default;
+$secondary-10: #cdd7e4 !default;
+$secondary-20: #b4c4d6 !default;
+$secondary-30: #99b0cb !default;
+$secondary-40: #2a5c96 !default;
+$secondary-60: #002b5e !default;
+$secondary-70: #002046 !default;
+$secondary-80: #00162f !default;
+$secondary-90: #000b17 !default;
+
+$secondary-colors: (
+  "5": $secondary-5,
+  "10": $secondary-10,
+  "20": $secondary-20,
+  "30": $secondary-30,
+  "40": $secondary-40,
+  "60": $secondary-60,
+  "70": $secondary-70,
+  "80": $secondary-80,
+  "90": $secondary-90,
+) !default;
+
+//point colors
+$point-5: #fdf2f3 !default;
+$point-10: #fad1d3 !default;
+$point-20: #f5a3a8 !default;
+$point-30: #f1747c !default;
+$point-40: #ec4651 !default;
+$point-60: #b9131e !default;
+$point-70: #8b0e16 !default;
+$point-80: #5c0a0f !default;
+$point-90: #2e0507 !default;
+
+$point-colors: (
+  "5": $point-5,
+  "10": $point-10,
+  "20": $point-20,
+  "30": $point-30,
+  "40": $point-40,
+  "60": $point-60,
+  "70": $point-70,
+  "80": $point-80,
+  "90": $point-90,
+) !default;
+
+//gray colors
+$gray-5: #f8f8f8 !default;
+$gray-10: #f0f0f0 !default;
+$gray-20: #e4e4e4 !default;
+$gray-30: #d8d8d8 !default;
+$gray-40: #c6c6c6 !default;
+$gray-50: #8e8e8e !default;
+$gray-60: #717171 !default;
+$gray-70: #555555 !default;
+$gray-80: #2d2d2d !default;
+$gray-90: #1d1d1d !default;
+
+$gray-colors: (
+  "5": $gray-5,
+  "10": $gray-10,
+  "20": $gray-20,
+  "30": $gray-30,
+  "40": $gray-40,
+  "50": $gray-50,
+  "60": $gray-60,
+  "70": $gray-70,
+  "80": $gray-80,
+  "90": $gray-90,
+) !default;
+
+//prefix
+$prefix: krds- !default;
+
+//breakpoints
+$breakpoint-sm: 600px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-lg: 1920px !default;
+$breakpoints: (
+  "sm": $breakpoint-sm,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg,
+) !default;
+
+$grid: 1340px !default;
+$p-tablet: 30px !default;
+$p-mobile: 20px !default;
+
+//spacers
+$spacers: (
+  "0": "0",
+  "default": ".1rem",
+  "default2": ".2rem",
+  "full": "100%",
+) !default;
+
+//font style
+$font-family-base: "Pretendard GOV", sans-serif !default;
+$font-size-root: 62.5% !default; //10px 1rem으로 설정
+$font-size-base: 1.7rem !default;
+
+$font-size: (
+  sizes: (
+    display: (
+      "sm": "4rem",
+      "md": "5rem",
+      "lg": "6.6rem",
+    ),
+    heading: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "5rem",
+    ),
+    title: (
+      "xsm": "1.5rem",
+      "sm": "1.7rem",
+      "md": "1.9rem",
+      "lg": "2.1rem",
+      "xlg": "2.5rem",
+      "xxlg": "3.2rem",
+    ),
+    body: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    link: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    detail: (
+      "sm": "1.3rem",
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+    label: (
+      "xsm": "1.3rem",
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+// Display font sizes
+$font-size-display-sm: 4rem !default;
+$font-size-display-md: 5rem !default;
+$font-size-display-lg: 6.6rem !default;
+
+// Heading font sizes
+$font-size-heading-sm: 3.2rem !default;
+$font-size-heading-md: 4rem !default;
+$font-size-heading-lg: 5rem !default;
+
+// Title font sizes
+$font-size-title-xsm: 1.5rem !default;
+$font-size-title-sm: 1.7rem !default;
+$font-size-title-md: 1.9rem !default;
+$font-size-title-lg: 2.1rem !default;
+$font-size-title-xlg: 2.5rem !default;
+$font-size-title-xxlg: 3.2rem !default;
+
+// Body font sizes
+$font-size-body-sm: 1.5rem !default;
+$font-size-body-md: 1.7rem !default;
+$font-size-body-lg: 1.9rem !default;
+
+// Link font sizes
+$font-size-link-sm: 1.5rem !default;
+$font-size-link-md: 1.7rem !default;
+$font-size-link-lg: 1.9rem !default;
+
+// Detail font sizes
+$font-size-detail-sm: 1.3rem !default;
+$font-size-detail-md: 1.5rem !default;
+$font-size-detail-lg: 1.7rem !default;
+
+// Label font sizes
+$font-size-label-xsm: 1.3rem !default;
+$font-size-label-sm: 1.5rem !default;
+$font-size-label-md: 1.7rem !default;
+$font-size-label-lg: 1.9rem !default;
+
+//font weight
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-medium: 500 !default;
+$font-bold: 700 !default;
+$font-bolder: 800 !default;
+$fws: (
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "bold": 700,
+  "bolder": 800,
+) !default;
+
+//line height style
+$line-height-none: 1 !default;
+$line-height-base: 1.5 !default;
+
+//border radius
+$border-radius: (
+  "1": ".1rem",
+  "2": ".2rem",
+  "4": ".4rem",
+  "6": ".6rem",
+  "8": ".8rem",
+  "10": "1rem",
+  "12": "1.2rem",
+  "full": "100%",
+) !default;
+
+//btn setting
+$btns: (
+  setting: (
+    //height
+    h:
+      (
+        "xsm": "3.2rem",
+        "sm": "4rem",
+        "md": "4.8rem",
+        "lg": "5.6rem",
+        "xlg": "6.4rem",
+      ),
+    //padding-x
+    px:
+      (
+        "xsm": "1rem",
+        "sm": "1.2rem",
+        "md": "1.6rem",
+        "lg": "2rem",
+        "xlg": "2.4rem",
+      ),
+    //border radius
+    rd:
+      (
+        "xsm": ".6rem",
+        "sm": ".6rem",
+        "md": ".8rem",
+        "lg": ".8rem",
+        "xlg": ".8rem",
+      ),
+    //font size
+    fz:
+      (
+        "xsm": "1.5rem",
+        "sm": "1.7rem",
+        "md": "1.7rem",
+        "lg": "1.9rem",
+        "xlg": "1.9rem",
+      ),
+  ),
+) !default;
+
+//btn chips
+$btnChipOutline: (
+  setting: (
+    h: (
+      "md": "3.2rem",
+      "lg": "3.6rem",
+    ),
+    pd: (
+      "md": "0rem 1.2rem",
+      "lg": "0rem 1.2rem",
+    ),
+    rd: (
+      "md": "10rem",
+      "lg": "10rem",
+    ),
+    fz: (
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+    gap: (
+      "md": ".2rem",
+      "lg": ".2rem",
+    ),
+    size: (
+      "md": "1.2rem",
+      "lg": "1.6rem",
+    ),
+  ),
+) !default;
+
+$btnChipFill: (
+  setting: (
+    h: (
+      "md": "3.2rem",
+      "lg": "3.6rem",
+    ),
+    pd: (
+      "md": "0rem 1.2rem",
+      "lg": "0rem 1.2rem",
+    ),
+    rd: (
+      "md": ".6rem",
+      "lg": ".6rem",
+    ),
+    fz: (
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+  ),
+) !default;
+
+//input setting
+$inputs: (
+  setting: (
+    h: (
+      "sm": "4rem",
+      "md": "4.8rem",
+      "lg": "5.6rem",
+      "xlg": "8rem",
+    ),
+    px: (
+      "sm": "1.6rem",
+      "md": "1.6rem",
+      "lg": "1.6rem",
+      "xlg": "2.4rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".8rem",
+      "lg": ".8rem",
+      "xlg": "1.2rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+      "xlg": "2.5rem",
+    ),
+  ),
+) !default;
+
+//radio checkbox setting
+$radios: (
+  setting: (
+    size: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    chk: (
+      "sm": ".8rem",
+      "md": "1rem",
+      "lg": "1.4rem",
+    ),
+    pos: (
+      "sm": ".2rem",
+      "md": ".5rem",
+      "lg": "1rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//form chips
+$rdoChipOutline: (
+  setting: (
+    h: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "4.8rem",
+    ),
+    pd: (
+      "sm": "0 1rem",
+      "md": "0 1.2rem",
+      "lg": "0 1.6rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".6rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.7rem",
+    ),
+  ),
+) !default;
+
+$chkChipOutline: (
+  setting: (
+    h: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "4.8rem",
+    ),
+    pd: (
+      "sm": "0 1rem 0 .8rem",
+      "md": "0 1.2rem 0 1rem",
+      "lg": "0 1.6rem 0 1.2rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".6rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.7rem",
+    ),
+    gap: (
+      "sm": ".4rem",
+      "md": ".4rem",
+      "lg": ".4rem",
+    ),
+    ico: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2rem",
+    ),
+  ),
+) !default;
+
+// checkbox
+$checkboxes: (
+  setting: (
+    size: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    primary-chk: (
+      "sm": "1.2rem",
+      "md": "1.6rem",
+      "lg": "2rem",
+    ),
+    secondary-chk: (
+      "md": "2rem",
+    ),
+    pos: (
+      "md": ".5rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//select setting
+$select: (
+  setting: (
+    h: (
+      "sm": "4rem",
+      "md": "4.8rem",
+      "lg": "5.6rem",
+    ),
+    pd: (
+      "sm": "0 5.2rem 0 1.6rem",
+      "md": "0 5.2rem 0 1.6rem",
+      "lg": "0 5.2rem 0 1.6rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".8rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    rn: (
+      "sm": "1.6rem",
+      "md": "1.6rem",
+      "lg": "1.6rem",
+    ),
+    bgs: (
+      "sm": "2rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+  ),
+) !default;
+
+//switch setting
+$switch: (
+  setting: (
+    h: (
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    w: (
+      "md": "3.2rem",
+      "lg": "4rem",
+    ),
+    b: (
+      "md": "1.6rem",
+      "lg": "2rem",
+    ),
+    br: (
+      "md": "0.2rem",
+      "lg": "0.2rem",
+    ),
+    pd: (
+      "md": "0.8rem",
+      "lg": "0.8rem",
+    ),
+    rd: (
+      "md": "4rem",
+      "lg": "4rem",
+    ),
+    fz: (
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//tab setting
+$tabs: (
+  setting: (
+    h: (
+      full: "5.6rem",
+      fill: "4.8rem",
+      line: "4.8rem",
+    ),
+    fz: (
+      full: "1.9rem",
+      fill: "1.9rem",
+      ilne: "1.9rem",
+    ),
+    px: (
+      full: "0",
+      fill: "1.6rem",
+      line: ".2rem",
+    ),
+    ml: (
+      full: "0",
+      fill: ".8rem",
+      line: "1.6rem",
+    ),
+    rd: (
+      full: ".8rem",
+      fill: ".8rem",
+      line: "0",
+    ),
+  ),
+) !default;
+
+//table setting
+
+//form control setting
+
+//transition
+$transition-base: 0.4s ease-in-out !default;
+$transition-fade: opacity 0.4s linear !default;
+$transition-collapse: max-height 0.4s ease !default;
+$transition-collapse-width: width 0.4s ease !default;
+
+//box shadow
+$box-shadow-base: 2px 2px 2px 0px rgba(0, 0, 0, 0.15) !default;
+
+//img url 대치
+$url: "../../img" !default;
+
+//position 종류
+$position-type: (x, y, both);
+
+// colors
+$white: #fff !default;
+$black: #000 !default;
+$gray: #8e8e8e !default;
+$primary: #246beb !default;
+$secondary: #003675 !default;
+$point: #e71825 !default;
+$danger: #eb003b !default;
+$warning: #ffb724 !default;
+$success: #008a1e !default;
+$information: #2768ff !default;
+
+// primary colors
+$primary-5: #eff5ff !default;
+$primary-10: #d3e1fb !default;
+$primary-20: #a7c4f7 !default;
+$primary-30: #7ca6f3 !default;
+$primary-40: #5089ef !default;
+$primary-60: #1d56bc !default;
+$primary-70: #16408d !default;
+$primary-80: #0e2b5e !default;
+$primary-90: #07152f !default;
+
+// secondary colors
+$secondary-5: #edf1f5 !default;
+$secondary-10: #cdd7e4 !default;
+$secondary-20: #b4c4d6 !default;
+$secondary-30: #99b0cb !default;
+$secondary-40: #2a5c96 !default;
+$secondary-60: #002b5e !default;
+$secondary-70: #002046 !default;
+$secondary-80: #00162f !default;
+$secondary-90: #000b17 !default;
+
+// point colors
+$point-5: #fdf2f3 !default;
+$point-10: #fad1d3 !default;
+$point-20: #f5a3a8 !default;
+$point-30: #f1747c !default;
+$point-40: #ec4651 !default;
+$point-60: #b9131e !default;
+$point-70: #8b0e16 !default;
+$point-80: #5c0a0f !default;
+$point-90: #2e0507 !default;
+
+// gray colors
+$gray-5: #f8f8f8 !default;
+$gray-10: #f0f0f0 !default;
+$gray-20: #e4e4e4 !default;
+$gray-30: #d8d8d8 !default;
+$gray-40: #c6c6c6 !default;
+$gray-50: #8e8e8e !default;
+$gray-60: #717171 !default;
+$gray-70: #555555 !default;
+$gray-80: #2d2d2d !default;
+$gray-90: #1d1d1d !default;
+
+// prefix
+$prefix: krds- !default;
+
+// breakpoints
+$breakpoint-sm: 600px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-lg: 1920px !default;
+
+// spacers
+$spacer-0: 0 !default;
+$spacer-default: 0.1rem !default;
+$spacer-default2: 0.2rem !default;
+$spacer-full: 100% !default;
+
+// font style
+$font-family-base: "Pretendard", sans-serif !default;
+$font-size-root: 62.5% !default; //10px 1rem으로 설정
+$font-size-base: 1.7rem !default;
+
+// Display font sizes
+$font-size-display-sm: 4rem !default;
+$font-size-display-md: 5rem !default;
+$font-size-display-lg: 6.6rem !default;
+
+// Heading font sizes
+$font-size-heading-sm: 3.2rem !default;
+$font-size-heading-md: 4rem !default;
+$font-size-heading-lg: 5rem !default;
+
+// Title font sizes
+$font-size-title-xsm: 1.5rem !default;
+$font-size-title-sm: 1.7rem !default;
+$font-size-title-md: 1.9rem !default;
+$font-size-title-lg: 2.1rem !default;
+$font-size-title-xlg: 2.5rem !default;
+$font-size-title-xxlg: 3.2rem !default;
+
+// Body font sizes
+$font-size-body-sm: 1.5rem !default;
+$font-size-body-md: 1.7rem !default;
+$font-size-body-lg: 1.9rem !default;
+
+// Link font sizes
+$font-size-link-sm: 1.5rem !default;
+$font-size-link-md: 1.7rem !default;
+$font-size-link-lg: 1.9rem !default;
+
+// Detail font sizes
+$font-size-detail-sm: 1.3rem !default;
+$font-size-detail-md: 1.5rem !default;
+$font-size-detail-lg: 1.7rem !default;
+
+// Label font sizes
+$font-size-label-xsm: 1.3rem !default;
+$font-size-label-sm: 1.5rem !default;
+$font-size-label-md: 1.7rem !default;
+$font-size-label-lg: 1.9rem !default;
+
+// Font weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 800 !default;
+
+// line height
+$line-height-none: 1 !default;
+$line-height-base: 1.5 !default;
+
+// border radius
+$border-radius-1: 0.1rem !default;
+$border-radius-2: 0.2rem !default;
+$border-radius-4: 0.4rem !default;
+$border-radius-6: 0.6rem !default;
+$border-radius-8: 0.8rem !default;
+$border-radius-10: 1rem !default;
+$border-radius-12: 1.2rem !default;
+$border-radius-full: 100% !default;
+
+// button settings
+$btn-height-xsm: 3.2rem !default;
+$btn-height-sm: 4rem !default;
+$btn-height-md: 4.8rem !default;
+$btn-height-lg: 5.6rem !default;
+$btn-height-xlg: 6.4rem !default;
+
+$btn-padding-x-xsm: 1rem !default;
+$btn-padding-x-sm: 1.2rem !default;
+$btn-padding-x-md: 1.6rem !default;
+$btn-padding-x-lg: 2rem !default;
+$btn-padding-x-xlg: 2.4rem !default;
+
+$btn-radius-xsm: 0.6rem !default;
+$btn-radius-sm: 0.6rem !default;
+$btn-radius-md: 0.8rem !default;
+$btn-radius-lg: 0.8rem !default;
+$btn-radius-xlg: 0.8rem !default;
+
+$btn-font-size-xsm: 1.5rem !default;
+$btn-font-size-sm: 1.7rem !default;
+$btn-font-size-md: 1.7rem !default;
+$btn-font-size-lg: 1.9rem !default;
+$btn-font-size-xlg: 1.9rem !default;
+
+// input settings
+$input-height-sm: 4rem !default;
+$input-height-md: 4.8rem !default;
+$input-height-lg: 5.6rem !default;
+$input-height-xlg: 8rem !default;
+
+$input-padding-x-sm: 1.6rem !default;
+$input-padding-x-md: 1.6rem !default;
+$input-padding-x-lg: 1.6rem !default;
+$input-padding-x-xlg: 2.4rem !default;
+
+$input-radius-sm: 0.6rem !default;
+$input-radius-md: 0.8rem !default;
+$input-radius-lg: 0.8rem !default;
+$input-radius-xlg: 1.2rem !default;
+
+$input-font-size-sm: 1.5rem !default;
+$input-font-size-md: 1.7rem !default;
+$input-font-size-lg: 1.9rem !default;
+$input-font-size-xlg: 2.5rem !default;
+
+// transition settings
+$transition-base: 0.4s ease-in-out !default;
+$transition-fade: opacity 0.4s linear !default;
+$transition-collapse: max-height 0.4s ease !default;
+$transition-collapse-width: width 0.4s ease !default;
+
+// box shadow
+$box-shadow-base: 2px 2px 2px 0px rgba(0, 0, 0, 0.15) !default;
+
+// image url
+$url: "../../img" !default;

@@ -1,0 +1,150 @@
+// 사이트 컨텐츠 내용
+:root {
+  --swiper-theme-color: red;
+}
+
+// 전역 스타일
+.swiper {
+  width: 100%;
+  height: 100%;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next::before,
+  .swiper-button-prev::before {
+    @include lineAwesome;
+    font-size: 3rem;
+    color: $black;
+    opacity: 0.5;
+  }
+  .swiper-button-next::before {
+    content: "\f138";
+  }
+  .swiper-button-prev::before {
+    content: "\f137";
+  }
+}
+
+.slide-intro {
+  .swiper-slide {
+    position: relative;
+    &.swiper-slide-active {
+      .text-area {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    img {
+      object-position: 50% 100%;
+    }
+    .text-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 70%;
+      max-width: 400px;
+      opacity: 0;
+      transition: all 0.5s;
+      // .text-area__tit
+      &__tit {
+        font-size: 3rem;
+        color: $gray-90;
+        font-family: "GmarketSansMedium";
+        font-weight: $font-medium;
+      }
+      &__cont {
+        color: $gray-70;
+      }
+      &__goto {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 7px 20px;
+        background: $primary;
+        color: $white;
+      }
+    }
+    img {
+      height: 50vh;
+    }
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+// tablet
+@media screen and (min-width: 600px) {
+  .slide-intro .swiper-slide img {
+    height: 70vh;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+  .slide-intro {
+    .swiper-slide {
+      img {
+        height: 90vh;
+      }
+      .text-area {
+        width: 100%;
+        max-width: none;
+        text-align: left;
+      }
+      .text-area__tit {
+        font-size: 6rem;
+      }
+      .text-area__cont {
+        font-size: 2rem;
+      }
+      .text-area__goto {
+        margin-top: 30px;
+      }
+    }
+    .swiper-pagination {
+      display: block;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
+
+.slide-studio {
+  overflow: visible;
+  width: 80%;
+  margin-left: 0;
+  @include mobileMore {
+    width: 90%;
+  }
+  @include tabletMore {
+    width: 100%;
+    margin-left: auto;
+  }
+  .swiper-pagination {
+    bottom: -50px;
+  }
+}

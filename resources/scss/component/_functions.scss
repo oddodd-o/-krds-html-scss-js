@@ -1,0 +1,210 @@
+// _functions.scss
+
+// Convert pixel to rem
+@function rem($px) {
+  @return ($px / 16) + rem;
+}
+
+// Get color from the color map
+@function get-color($name, $shade: null) {
+  $color-value: map-get($colors, $name);
+
+  @if type-of($color-value) == "map" and $shade {
+    @return map-get($color-value, $shade);
+  } @else {
+    @return $color-value;
+  }
+}
+
+// Get primary color shade
+@function get-primary-color($shade) {
+  @return map-get($primary-colors, $shade);
+}
+
+// Get secondary color shade
+@function get-secondary-color($shade) {
+  @return map-get($secondary-colors, $shade);
+}
+
+// Get point color shade
+@function get-point-color($shade) {
+  @return map-get($point-colors, $shade);
+}
+
+// Get gray color shade
+@function get-gray-color($shade) {
+  @return map-get($gray-colors, $shade);
+}
+
+// Strip unit from value
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Get button height
+@function get_btn_height($size) {
+  $height-map: map-get(map-get($btns, setting), "h");
+  $height-value: map-get($height-map, $size);
+
+  @if $height-value {
+    @return unquote($height-value);
+  }
+  @return null;
+}
+
+// Get button padding
+@function get_btn_padding_x($size) {
+  $padding-map: map-get(map-get($btns, setting), "px");
+  $padding-value: map-get($padding-map, $size);
+
+  @if $padding-value {
+    @return unquote($padding-value);
+  }
+  @return null;
+}
+
+// Get button border radius
+@function get_btn_border_radius($size) {
+  $radius-map: map-get(map-get($btns, setting), "rd");
+  $radius-value: map-get($radius-map, $size);
+
+  @if $radius-value {
+    @return unquote($radius-value);
+  }
+  @return null;
+}
+
+// Get button font size
+@function get_btn_font_size($size) {
+  $font-map: map-get(map-get($btns, setting), "fz");
+  $font-value: map-get($font-map, $size);
+
+  @if $font-value {
+    @return unquote($font-value);
+  }
+  @return null;
+}
+
+// Get font size based on category and size
+@function get-font-size($category, $size) {
+  @return map-get(map-get(map-get($font-size, sizes), $category), $size);
+}
+
+// Get border radius
+@function get-border-radius($size) {
+  @return map-get($border-radius, $size);
+}
+
+// Get line height
+@function get-line-height($type) {
+  @if $type == "none" {
+    @return $line-height-none;
+  } @else if $type == "base" {
+    @return $line-height-base;
+  }
+}
+
+// Get transition timing
+@function get-transition($type) {
+  @if $type == "base" {
+    @return $transition-base;
+  } @else if $type == "fade" {
+    @return $transition-fade;
+  } @else if $type == "collapse" {
+    @return $transition-collapse;
+  } @else if $type == "collapse-width" {
+    @return $transition-collapse-width;
+  }
+}
+
+// Get box shadow
+@function get-box-shadow($type) {
+  @if $type == "base" {
+    @return $box-shadow-base;
+  }
+}
+
+// Get spacing (margin or padding)
+@function get-spacer($size) {
+  @return map-get($spacers, $size);
+}
+
+// Get breakpoint
+@function get-breakpoint($size) {
+  @return map-get($breakpoints, $size);
+}
+
+// Get font weight
+@function get-font-weight($weight) {
+  @return map-get($fws, $weight);
+}
+
+// Input related functions
+@function get-input-height($size) {
+  $height-map: map-get(map-get($inputs, setting), "h");
+  @return map-get($height-map, $size);
+}
+
+@function get-input-padding($size) {
+  $padding-map: map-get(map-get($inputs, setting), "px");
+  @return map-get($padding-map, $size);
+}
+
+@function get-input-radius($size) {
+  $radius-map: map-get(map-get($inputs, setting), "rd");
+  @return map-get($radius-map, $size);
+}
+
+@function get-input-font-size($size) {
+  $font-map: map-get(map-get($inputs, setting), "fz");
+  @return map-get($font-map, $size);
+}
+
+// Radio/Checkbox related functions
+@function get-radio-size($size) {
+  $size-map: map-get(map-get($radios, setting), "size");
+  @return map-get($size-map, $size);
+}
+
+@function get-radio-check-size($size) {
+  $check-map: map-get(map-get($radios, setting), "chk");
+  @return map-get($check-map, $size);
+}
+
+// Select related functions
+@function get-select-height($size) {
+  $height-map: map-get(map-get($select, setting), "h");
+  @return map-get($height-map, $size);
+}
+
+@function get-select-padding($size) {
+  $padding-map: map-get(map-get($select, setting), "pd");
+  @return map-get($padding-map, $size);
+}
+
+// Switch related functions
+@function get-switch-height($size) {
+  $height-map: map-get(map-get($switch, setting), "h");
+  @return map-get($height-map, $size);
+}
+
+@function get-switch-width($size) {
+  $width-map: map-get(map-get($switch, setting), "w");
+  @return map-get($width-map, $size);
+}
+
+// Tab related functions
+@function get-tab-height($type) {
+  $height-map: map-get(map-get($tabs, setting), "h");
+  @return map-get($height-map, $type);
+}
+
+@function get-tab-padding($type) {
+  $padding-map: map-get(map-get($tabs, setting), "px");
+  @return map-get($padding-map, $type);
+}
+
+// Get prefix
+@function get-prefix() {
+  @return $prefix;
+}

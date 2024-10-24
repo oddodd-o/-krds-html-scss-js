@@ -1,0 +1,613 @@
+@import "../variables";
+
+// focus color
+@mixin focus($offset: -0.4rem, $color: $primary, $alpha: 0.8) {
+  //border-radius: inherit;
+  outline-offset: $offset;
+  $transparent: 1 - $alpha;
+  // $focus-color: transparentize($color, $transparent);
+  $focus-color: $primary;
+  outline: 2px solid $focus-color;
+}
+
+//flex 확대 축소
+@mixin flex-size($shrink, $grow) {
+  flex-shrink: $shrink;
+  flex-grow: $grow;
+}
+
+//btn reset
+@mixin btn-reset {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  &:hover,
+  &:active {
+    background-color: inherit;
+  }
+}
+
+/* **** area mixin ****/
+//columns
+@mixin columns($total, $num, $gutter) {
+}
+
+//spacer
+@mixin spacer($num) {
+  @for $i from 1 through $num {
+    $key: $i;
+    $value: ($i * 4 * 0.1) + rem;
+    //default spacers value: _variables.scss
+    $spacers: map-merge(
+      (
+        $key: $value,
+      ),
+      $spacers
+    ) !global;
+  }
+}
+
+//border radius
+@mixin radius($num) {
+  $border-radius: map-merge(
+      $num: (
+        $num * 0.1,
+      ) + rem,
+    ),
+    $border-radius;
+}
+
+//position
+@mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+}
+
+//width height 같게
+@mixin foursquare($size) {
+  width: $size;
+  height: $size;
+}
+
+//pseudo element setting
+@mixin pseudo($c: null) {
+  content: "" + $c + "";
+}
+
+//flex layout
+@mixin flex-layout($d: flex, $ai: flex-start, $jc: flex-start, $fd: row) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+//group contents
+@mixin group-wrap() {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+}
+@mixin group() {
+  flex: 1 1 auto;
+  position: relative;
+  width: 1%;
+  min-width: 0;
+}
+
+//flex item equal width
+@mixin equal-width() {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+
+//position 중앙 정렬
+@mixin position-center($type) {
+  @each $type in $position-type {
+    //좌우중앙
+    @if ($type == "x") {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    //상하중앙
+    @else if ($type == "y") {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    //상하좌우중앙
+    @else if ($type == "both") {
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+//transform 기준점 중앙 정렬
+@mixin transform-origin($x: 50%, $y: 50%) {
+  transform-origin: $x $y;
+}
+
+/* **** text attr ****/
+//text ellipsis
+@mixin ellipsis($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+//sr-only
+@mixin sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+//reset text : popover/tooltip
+@mixin reset-text {
+  font-family: var(---fz-body-md);
+  font-style: normal;
+  font-weight: map-get($fws, normal);
+  line-height: $line-height-base;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  //word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
+}
+
+//css animation visibility
+@mixin visibility($v) {
+  @if ($v == hidden) {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+  } @else if ($v == visible) {
+    visibility: visible;
+    z-index: auto;
+    opacity: 1;
+  }
+}
+
+/* **** scroll ****/
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-40);
+    border-radius: 0.8rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--gray-30);
+  }
+}
+
+//font size
+@mixin fz() {
+  @each $type, $size in map-get($font-size, "sizes") {
+    @each $key, $value in $size {
+      --fz-#{$type}-#{$key}: #{$value};
+    }
+  }
+}
+
+//btn setting
+@mixin btn() {
+  @each $type, $size in map-get($btns, "setting") {
+    @each $key, $value in $size {
+      --btn-#{$type}-#{$key}: #{$value};
+
+      @if ($type == "h") {
+        //높이별 class값 추가
+        @at-root .btn.#{$key} {
+          height: #{$value};
+          padding: 0 var(--btn-px-#{$key});
+          border-radius: var(--btn-rd-#{$key});
+          font-size: var(--btn-fz-#{$key});
+        }
+      }
+    }
+  }
+}
+
+//btn chips
+@mixin btn-chip($name, $default) {
+  @if ($name == "outline") {
+    @each $type, $size in map-get($btnChipOutline, "setting") {
+      @each $key, $value in $size {
+        --btnChipOutline-#{$type}-#{$key}: #{$value};
+
+        @if ($type == "h") {
+          @at-root .btn-chip-outline.#{$key} {
+            height: var(--btnChipOutline-h-#{$key});
+            padding: var(--btnChipOutline-pd-#{$key});
+            border-radius: var(--btnChipOutline-rd-#{$key});
+            font-size: var(--btnChipOutline-fz-#{$key});
+            .btn-del {
+              width: var(--btnChipOutline-size-#{$key});
+              height: var(--btnChipOutline-size-#{$key});
+              background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0 0;
+              background-size: contain;
+            }
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-outline {
+            height: var(--btnChipOutline-h-#{$default});
+            padding: var(--btnChipOutline-pd-#{$default});
+            border-radius: var(--btnChipOutline-rd-#{$default});
+            font-size: var(--btnChipOutline-fz-#{$default});
+            .btn-del {
+              width: var(--btnChipOutline-size-#{$default});
+              height: var(--btnChipOutline-size-#{$default});
+              background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0 0;
+              background-size: contain;
+              &:focus {
+                @include focus($offset: 0.4rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($name == "fill") {
+    @each $type, $size in map-get($btnChipFill, "setting") {
+      @each $key, $value in $size {
+        --btnChipFill-#{$type}-#{$key}: #{$value};
+
+        @if ($type == "h") {
+          @at-root .btn-chip-fill.#{$key} {
+            height: var(--btnChipFill-h-#{$key});
+            padding: var(--btnChipFill-pd-#{$key});
+            border-radius: var(--btnChipFill-rd-#{$key});
+            font-size: var(--btnChipFill-fz-#{$key});
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-fill {
+            height: var(--btnChipFill-h-#{$default});
+            padding: var(--btnChipFill-pd-#{$default});
+            border-radius: var(--btnChipFill-rd-#{$default});
+            font-size: var(--btnChipFill-fz-#{$default});
+            &:focus {
+              @include focus($offset: 0.4rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* **** form mixin ****/
+//input setting
+@mixin input() {
+  @each $type, $size in map-get($inputs, "setting") {
+    @each $key, $value in $size {
+      --input-#{$type}-#{$key}: #{$value};
+
+      @if ($type == "h") {
+        //높이별 class값 추가
+        @at-root .form-control.#{$key} {
+          height: #{$value};
+          padding: 0 var(--input-px-#{$key});
+          border-radius: var(--input-rd-#{$key});
+          font-size: var(--input-fz-#{$key});
+        }
+      }
+    }
+  }
+}
+
+@mixin radio() {
+  @each $type, $size in map-get($radios, "setting") {
+    @each $key, $value in $size {
+      --rdo-#{$type}-#{$key}: #{$value};
+      @if ($type == "size") {
+        @at-root .form-check.#{$key} {
+          > [type="radio"] {
+            ~ label {
+              font-size: var(--krds-rdo-fz-#{$key});
+              line-height: var(--krds-rdo-#{$type}-#{$key});
+              min-height: var(--krds-rdo-#{$type}-#{$key});
+              padding-left: calc(var(--krds-rdo-#{$type}-#{$key}) + var(--krds-spacer-2));
+              &::before {
+                width: var(--rdo-#{$type}-#{$key});
+                height: var(--rdo-#{$type}-#{$key});
+              }
+              &::after {
+                top: calc((var(--rdo-size-#{$key}) - var(--rdo-chk-#{$key})) / 2);
+                left: calc((var(--rdo-size-#{$key}) - var(--rdo-chk-#{$key})) / 2);
+                width: var(--rdo-chk-#{$key});
+                height: var(--rdo-chk-#{$key});
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin chk() {
+  @each $type, $size in map-get($checkboxes, "setting") {
+    @each $key, $value in $size {
+      --chk-#{$type}-#{$key}: #{$value};
+      @if ($type == "size") {
+        @at-root .form-check.#{$key} {
+          > [type="checkbox"] {
+            ~ label {
+              font-size: var(--krds-chk-fz-#{$key});
+              line-height: var(--krds-chk-#{$type}-#{$key});
+              min-height: var(--krds-chk-#{$type}-#{$key});
+              padding-left: calc(var(--krds-chk-#{$type}-#{$key}) + var(--krds-spacer-2));
+              &::before {
+                width: var(--chk-#{$type}-#{$key});
+                height: var(--chk-#{$type}-#{$key});
+              }
+              &::after {
+                width: var(--chk-primary-chk-#{$key});
+                height: var(--chk-primary-chk-#{$key});
+              }
+            }
+          }
+          &.ico-only {
+            > [type="checkbox"] {
+              ~ label {
+                padding-left: var(--krds-chk-#{$type}-#{$key});
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//select setting
+@mixin select() {
+  @each $type, $size in map-get($select, "setting") {
+    @each $key, $value in $size {
+      --select-#{$type}-#{$key}: #{$value};
+
+      @if ($type == "h") {
+        //높이별 class값 추가
+        @at-root .form-select.#{$key} {
+          height: #{$value};
+          padding: var(--select-pd-#{$key});
+          border-radius: var(--select-rd-#{$key});
+          font-size: var(--select-fz-#{$key});
+          background-size: var(--select-bgs-#{$key});
+        }
+      }
+    }
+  }
+}
+
+//switch setting
+@mixin switch() {
+  @each $type, $size in map-get($switch, "setting") {
+    @each $key, $value in $size {
+      --switch-#{$type}-#{$key}: #{$value};
+
+      @if ($type == "w") {
+        @at-root .form-switch.#{$key} {
+          [type="checkbox"] {
+            ~ i {
+              &::before {
+                width: var(--switch-b-#{$key});
+                height: var(--switch-b-#{$key});
+                border-radius: var(--switch-rd-#{$key});
+              }
+              &::after {
+                width: var(--switch-w-#{$key});
+                height: var(--switch-h-#{$key});
+              }
+            }
+            ~ label {
+              $labelValue: var(--switch-w-#{$key});
+              $pdValue: var(--switch-pd-#{$key});
+              padding-left: calc($labelValue + $pdValue);
+              margin-left: calc($labelValue * -1);
+              font-size: var(--switch-fz-#{$key});
+            }
+            &:checked {
+              ~ i {
+                &::before {
+                  $posL: calc(var(--switch-w-#{$key}) - var(--switch-b-#{$key}) - var(--switch-br-#{$key}));
+                  @include position($l: $posL);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//form chips
+@mixin form-chip($name, $default) {
+  @if ($name == "radio") {
+    @each $type, $size in map-get($rdoChipOutline, "setting") {
+      @each $key, $value in $size {
+        --rdoChipOutline-#{$type}-#{$key}: #{$value};
+
+        @if ($type == "h") {
+          @at-root .form-chip.#{$key} {
+            .radio {
+              ~ .form-chip-outline {
+                gap: var(--chkChipOutline-gap-#{$key});
+                height: var(--rdoChipOutline-h-#{$key});
+                padding: var(--rdoChipOutline-pd-#{$key});
+                border-radius: var(--rdoChipOutline-rd-#{$key});
+                font-size: var(--rdoChipOutline-fz-#{$key});
+                &::before {
+                  width: var(--chkChipOutline-ico-#{$key});
+                  height: var(--chkChipOutline-ico-#{$key});
+                  background: url(#{$url}/component/common/ico_check_chip.svg) no-repeat 0 0;
+                  background-size: contain;
+                }
+              }
+              &:checked {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_checked.svg);
+                  }
+                }
+              }
+              &:disabled {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_disabled.svg);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @if ($default) {
+          @at-root .form-chip {
+            .radio {
+              ~ .form-chip-outline {
+                gap: var(--chkChipOutline-gap-#{$key});
+                height: var(--rdoChipOutline-h-#{$key});
+                padding: var(--rdoChipOutline-pd-#{$key});
+                border-radius: var(--rdoChipOutline-rd-#{$key});
+                font-size: var(--rdoChipOutline-fz-#{$key});
+                &::before {
+                  width: var(--chkChipOutline-ico-#{$key});
+                  height: var(--chkChipOutline-ico-#{$key});
+                  background: url(#{$url}/component/common/ico_check_chip.svg) no-repeat 0 0;
+                  background-size: contain;
+                }
+              }
+              &:checked {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_checked.svg);
+                  }
+                }
+              }
+              &:disabled {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_disabled.svg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($name == "checkbox") {
+    @each $type, $size in map-get($chkChipOutline, "setting") {
+      @each $key, $value in $size {
+        --chkChipOutline-#{$type}-#{$key}: #{$value};
+
+        @if ($type == "h") {
+          @at-root .form-chip.#{$key} {
+            .checkbox {
+              ~ .form-chip-outline {
+                gap: var(--chkChipOutline-gap-#{$key});
+                height: var(--chkChipOutline-h-#{$key});
+                padding: var(--chkChipOutline-pd-#{$key});
+                border-radius: var(--chkChipOutline-rd-#{$key});
+                font-size: var(--chkChipOutline-fz-#{$key});
+                &::before {
+                  width: var(--chkChipOutline-ico-#{$key});
+                  height: var(--chkChipOutline-ico-#{$key});
+                  background: url(#{$url}/component/common/ico_check_chip.svg) no-repeat 0 0;
+                  background-size: contain;
+                }
+              }
+              &:checked {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_checked.svg);
+                  }
+                }
+              }
+              &:disabled {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_disabled.svg);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @if ($default) {
+          @at-root .form-chip {
+            .checkbox {
+              ~ .form-chip-outline {
+                gap: var(--chkChipOutline-gap-#{$key});
+                height: var(--chkChipOutline-h-#{$key});
+                padding: var(--chkChipOutline-pd-#{$key});
+                border-radius: var(--chkChipOutline-rd-#{$key});
+                font-size: var(--chkChipOutline-fz-#{$key});
+                &::before {
+                  width: var(--chkChipOutline-ico-#{$key});
+                  height: var(--chkChipOutline-ico-#{$key});
+                  background: url(#{$url}/component/common/ico_check_chip.svg) no-repeat 0 0;
+                  background-size: contain;
+                }
+              }
+              &:checked {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_checked.svg);
+                  }
+                }
+              }
+              &:disabled {
+                ~ .form-chip-outline {
+                  &::before {
+                    background-image: url(#{$url}/component/common/ico_check_chip_disabled.svg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//tab setting
+@mixin tabs() {
+  @each $type, $size in map-get($tabs, "setting") {
+    @each $key, $value in $size {
+      --tab-#{$type}-#{$key}: #{$value};
+    }
+  }
+}
+
+@mixin lineAwesome {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}

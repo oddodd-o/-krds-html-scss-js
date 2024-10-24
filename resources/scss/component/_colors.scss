@@ -1,0 +1,41 @@
+@each $color, $value in $colors {
+	.text-#{$color} {
+		color: $value;
+	}
+	.bg-#{$color} {
+		background-color: $value;
+	}
+}
+
+@each $color, $value in $primary-colors {
+	.text-primary-#{$color} {
+		color: $value;
+	}
+	.bg-primary-#{$color} {
+		background-color: $value;
+	}
+}
+@each $color, $value in $secondary-colors {
+	.text-secondary-#{$color} {
+		color: $value;
+	}
+	.bg-secondary-#{$color} {
+		background-color: $value;
+	}
+}
+@each $color, $value in $point-colors {
+	.text-point-#{$color} {
+		color: $value;
+	}
+	.bg-point-#{$color} {
+		background-color: $value;
+	}
+}
+@each $color, $value in $gray-colors {
+	.text-gray-#{$color} {
+		color: $value;
+	}
+	.bg-gray-#{$color} {
+		background-color: $value;
+	}
+}

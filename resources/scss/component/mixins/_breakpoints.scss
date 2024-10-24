@@ -1,0 +1,37 @@
+// 599px 이하일 경우
+@mixin mobile {
+  @media (max-width: ($breakpoint-sm - 1px)) {
+    @content;
+  }
+}
+// 600px 이상일 경우
+@mixin mobileMore {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+// 600px 이상 1024px 이하일 경우
+@mixin tablet {
+  @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-md - 1px)) {
+    @content;
+  }
+}
+
+@mixin tabletLess {
+  @media (max-width: ($breakpoint-md - 1px)) {
+    @content;
+  }
+}
+
+@mixin tabletMore {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}

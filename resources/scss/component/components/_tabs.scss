@@ -1,0 +1,196 @@
+.tab-area {
+  width: 100%;
+}
+.tab {
+  > ul {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    width: 100%;
+  }
+  li,
+  .btn-tab {
+    @include flex-layout(inline-flex, center, center);
+    position: relative;
+    white-space: nowrap;
+  }
+  .btn-tab {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    color: var(--gray-70);
+    font-weight: map-get($fws, bold);
+    transition: $transition-base;
+    &:not(:disabled):hover {
+      border-radius: 0.6rem;
+      background-color: var(--krds-secondary-5);
+      transition: $transition-base;
+    }
+    &:not(:disabled):active {
+      background-color: var(--krds-secondary-10);
+      transition: $transition-base;
+    }
+    &[disabled] {
+      color: var(--krds-gray-50);
+      cursor: default;
+    }
+  }
+  li {
+    flex-grow: 0;
+  }
+  &.full {
+    width: 100%;
+    .btn-tab {
+      height: var(--tab-h-full) !important;
+      font-size: var(--tab-fz-full) !important;
+    }
+    > ul {
+      @include group-wrap;
+      > li {
+        @include equal-width;
+      }
+    }
+  }
+  &.fill {
+    .btn-tab {
+      height: var(--tab-h-fill);
+      padding: 0 var(--tab-px-fill);
+      font-size: var(--tab-fz-fill);
+    }
+    .active {
+      .btn-tab {
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+        color: var(--white);
+      }
+    }
+    > ul {
+      > li {
+        & + li {
+          margin-left: var(--tab-ml-fill);
+        }
+        .btn-tab {
+          border-radius: var(--tab-rd-fill);
+        }
+      }
+    }
+    &.full {
+      .btn-tab {
+        border: 1px solid var(--secondary-20);
+      }
+      .active {
+        .btn-tab {
+          background-color: var(--secondary);
+          border-color: var(--secondary);
+          color: var(--white);
+        }
+      }
+      > ul {
+        > li {
+          & + li {
+            margin-left: 0;
+            .btn-tab {
+              border-left: none;
+            }
+          }
+          .btn-tab {
+            border-radius: 0;
+          }
+          &:first-of-type {
+            .btn-tab {
+              border-top-left-radius: var(--tab-rd-full);
+              border-bottom-left-radius: var(--tab-rd-full);
+            }
+          }
+          &:last-of-type {
+            .btn-tab {
+              border-top-right-radius: var(--tab-rd-full);
+              border-bottom-right-radius: var(--tab-rd-full);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.line {
+    .btn-tab {
+      height: var(--tab-h-line);
+      padding: 0 var(--tab-px-line);
+      font-size: var(--tab-fz-line);
+      &:before {
+        @include position($b: 0, $l: 50%);
+        @include pseudo();
+        width: 0;
+        height: 0.2rem;
+        background-color: var(--secondary);
+        transition: $transition-base;
+      }
+    }
+    .active {
+      .btn-tab {
+        color: var(--secondary);
+        &:before {
+          @include position($l: 0);
+          width: 100%;
+        }
+      }
+    }
+    > ul {
+      > li {
+        & + li {
+          margin-left: var(--tab-ml-line);
+        }
+      }
+    }
+    &.full {
+      .btn-tab {
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+        border-bottom: 2px solid var(--gray-30);
+        &:before {
+          bottom: -0.2rem;
+          height: 0.4rem;
+        }
+        &:hover,
+        &:active {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+      > ul {
+        > li {
+          & + li {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab-conts {
+  display: none;
+  margin-top: var(--spacer-10);
+  /*position: absolute;
+	z-index: -1;
+	opacity: 0;
+	transition: $transition-fade;*/
+  &.active {
+    @include flex-layout($fd: column, $ai: normal);
+    gap: var(--spacer-10);
+    /*position: relative;
+		z-index: auto;
+		opacity: 1;*/
+  }
+}
+
+//mobile only
+@include mobile {
+  .tab-conts {
+    margin-top: var(--spacer-10);
+    &.active {
+      gap: var(--spacer-8);
+    }
+  }
+}

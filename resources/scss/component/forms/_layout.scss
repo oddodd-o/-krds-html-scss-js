@@ -1,0 +1,263 @@
+/* form area */
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-6);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-3);
+  width: 100%;
+  .form-tit {
+    width: 100%;
+  }
+  .form-conts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--krds-spacer-3);
+    width: 100%;
+    &.keyword-sch {
+      width: 58.8rem;
+    }
+    .form-label {
+      display: flex;
+      // font-size: 1.5rem;
+      font-size: var(--fz-label-sm);
+      width: 100%;
+    }
+    &.btn-ico-wrap {
+      //input안에 button 노출
+      position: relative;
+      .form-control {
+        padding-right: var(--spacer-14);
+      }
+      .btn {
+        @include position($t: 50%, $r: 1.6rem);
+        transform: translateY(-50%);
+      }
+    }
+    &.datepicker-conts {
+      gap: 0;
+    }
+    .form-check {
+      .form-check-cnt {
+        margin-top: 1.2rem;
+        .form-check-p {
+          color: var(--gray-70);
+        }
+      }
+    }
+  }
+  > p {
+    width: 100%;
+  }
+  [class^="form-hint"] {
+    $value: calc(2rem + var(--spacer-1));
+    font-size: var(--fz-label-sm);
+    color: var(--gray-70);
+    padding-left: $value;
+    &::before {
+      display: inline-flex;
+      @include foursquare(2rem);
+      @include flex-size(0, 0);
+      @include pseudo();
+      margin-left: calc($value * -1);
+      margin-right: var(--spacer-1);
+      vertical-align: top;
+      background: url(#{$url}/component/common/ico_hint_20.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
+  .is-error {
+    ~ .form-hint-invalid {
+      color: var(--point);
+      &::before {
+        background-color: transparent;
+        background-image: url(#{$url}/component/common/ico_hint_error.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.form-checks-inline {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  &.range {
+    align-items: flex-end;
+    position: relative;
+    > li {
+      &:not(.mark) {
+        //flex: auto;
+        @include flex-layout($fd: column);
+        @include equal-width();
+        gap: 1.2rem;
+      }
+      &.mark {
+        @include flex-layout($ai: center);
+        flex: none;
+        height: var(--input-h-lg);
+        text-align: center;
+        &.md {
+          height: var(--input-h-md);
+        }
+        &.sm {
+          height: var(--input-h-sm);
+        }
+      }
+    }
+    &.set {
+      background-color: var(--white);
+      border: 1px solid var(--gray-60);
+      border-radius: var(--input-rd-lg);
+      .form-control {
+        background-color: transparent;
+        border-color: transparent;
+      }
+      &::after {
+        @include position($t: 50%, $r: 1.6rem);
+        @include pseudo();
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url(#{$url}/component/common/ico_calendar.svg) no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.row {
+  .input-group {
+    flex-direction: column;
+    &.range {
+      > li {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* for common */
+.radio,
+.checkbox {
+  ~ .form-chip-outline {
+    display: inline-flex;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--gray-40);
+  }
+  &:focus {
+    ~ .form-chip-outline {
+      border-color: var(--primary);
+      // border-width: .2rem;
+      // outline-offset: -.5rem;
+    }
+  }
+  &:checked {
+    ~ .form-chip-outline {
+      background-color: var(--primary-5);
+      border-color: var(--information);
+      color: var(--primary-60);
+    }
+  }
+  &:disabled {
+    ~ .form-chip-outline {
+      pointer-events: none;
+      background-color: var(--gray-30);
+      border-color: var(--gray-40);
+      color: var(--gray-60);
+    }
+  }
+}
+
+/* 검색 폼 */
+.sch-form-wrap {
+  @include flex-layout($ai: center);
+  gap: var(--krds-spacer-4);
+  &.vert {
+    @include flex-layout($fd: column, $ai: flex-start);
+    .sch-input {
+      width: 100%;
+    }
+  }
+  .input-group {
+    .form-select {
+      width: auto;
+    }
+  }
+  .btn-txt {
+    &.ico-sch1 {
+      &::before {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+}
+.sch-input {
+  display: flex;
+  position: relative;
+  .form-control {
+    padding: 0 var(--krds-spacer-12) 0 var(--krds-spacer-4);
+    ~ .ico-sch {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &.xlg {
+      font-weight: map-get($fws, bold);
+      padding: 0 var(--krds-spacer-18) 0 var(--krds-spacer-6);
+      ~ .ico-sch {
+        right: var(--krds-spacer-6);
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+  .ico-sch {
+    position: absolute;
+    top: 50%;
+    right: var(--krds-spacer-4);
+    transform: translateY(-50%);
+  }
+}
+
+//모바일 전용
+@include mobile {
+  .form-group {
+    .form-conts {
+      &.keyword-sch {
+        width: 100%;
+      }
+    }
+  }
+
+  /* 검색 폼 */
+  .sch-form-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sch-input {
+    .form-control {
+      &.xlg {
+        padding: 0 var(--krds-spacer-12) 0 var(--krds-spacer-4);
+        ~ .ico-sch {
+          right: var(--krds-spacer-4);
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+}
