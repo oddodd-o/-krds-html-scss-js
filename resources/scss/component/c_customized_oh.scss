@@ -1,0 +1,117 @@
+/* 공통 */
+@import "include";
+
+
+/* **** guide css **** */
+#g-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    #g-header {
+        background-color: #fff;
+        border-bottom: 1px solid #f1f1f1;
+        padding:2.5rem;
+        .inner {
+            display: flex;
+            align-items: center;
+            .gnb {
+                margin-left: auto;
+                ul {
+                    display: flex;
+                    a {
+                        display: flex;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    #g-container {
+        display: flex;
+        flex:1;
+        padding:4rem 2.5rem;
+        .g-aside {
+            flex-shrink: 0;
+            width: 24rem;
+            .inner {
+                background-color: #e2e2e2;
+                border-radius: .8rem;
+                padding: 1.5rem 1rem;
+                .lnb {
+                    a {
+                        display: flex;
+                        padding: .8rem 1rem
+                    }
+                    .active {
+                        a {
+                            background-color: $white;
+                            border-radius: var(--#{$prefix}rd-4);
+                            font-weight: map-get($fws, bold);
+                        }
+                    }
+                }
+            }
+        }
+        .g-content {
+            flex: 1;
+            padding:0 0 0 4rem;
+        }
+    }
+    #g-footer {
+        text-align: center;
+        background-color: var(--#{$prefix}gray-90);
+        padding: 2rem 1rem;
+        font-size: 1.2rem;
+        color: var(--#{$prefix}white);
+    }
+}
+.g-heading-l {
+    margin-bottom: 4rem;
+    span {
+        display: flex;
+        font-size:2rem;
+        font-weight: 400;
+    }
+    strong {
+        display: flex;
+        font-size:5rem;
+    }
+}
+
+.g-heading-m {
+    font-size:3rem;
+    margin:5rem 0 1.5rem;
+    + .g-heading-s {
+        margin-top: -1rem;
+    }
+}
+
+.g-heading-s {
+    font-size:2.2rem;
+    margin:2.5rem 0 1.5rem;
+    &::before {
+        content:'-';
+        margin-right: 0.4rem;
+    }
+}
+
+.g-example-box {
+    .g-example {
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding: 2rem;
+        border: 1px solid #e2e2e2;
+        border-radius: 0.8rem;
+        &.row {
+            flex-direction: row;
+        }
+        > div {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+

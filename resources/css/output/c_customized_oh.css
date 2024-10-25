@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* 공통 */
+/* 공통 */
+/* **** area mixin ****/
+/* **** text attr ****/
+/* **** scroll ****/
+/* **** form mixin ****/
+/* **** guide css **** */
+#g-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#g-wrap #g-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 2.5rem;
+}
+#g-wrap #g-header .inner {
+  display: flex;
+  align-items: center;
+}
+#g-wrap #g-header .inner .gnb {
+  margin-left: auto;
+}
+#g-wrap #g-header .inner .gnb ul {
+  display: flex;
+}
+#g-wrap #g-header .inner .gnb ul a {
+  display: flex;
+  padding: 1rem;
+}
+#g-wrap #g-container {
+  display: flex;
+  flex: 1;
+  padding: 4rem 2.5rem;
+}
+#g-wrap #g-container .g-aside {
+  flex-shrink: 0;
+  width: 24rem;
+}
+#g-wrap #g-container .g-aside .inner {
+  background-color: #e2e2e2;
+  border-radius: 0.8rem;
+  padding: 1.5rem 1rem;
+}
+#g-wrap #g-container .g-aside .inner .lnb a {
+  display: flex;
+  padding: 0.8rem 1rem;
+}
+#g-wrap #g-container .g-aside .inner .lnb .active a {
+  background-color: #fff;
+  border-radius: var(--krds-rd-4);
+  font-weight: 700;
+}
+#g-wrap #g-container .g-content {
+  flex: 1;
+  padding: 0 0 0 4rem;
+}
+#g-wrap #g-footer {
+  text-align: center;
+  background-color: var(--krds-gray-90);
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  color: var(--krds-white);
+}
+
+.g-heading-l {
+  margin-bottom: 4rem;
+}
+.g-heading-l span {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.g-heading-l strong {
+  display: flex;
+  font-size: 5rem;
+}
+
+.g-heading-m {
+  font-size: 3rem;
+  margin: 5rem 0 1.5rem;
+}
+.g-heading-m + .g-heading-s {
+  margin-top: -1rem;
+}
+
+.g-heading-s {
+  font-size: 2.2rem;
+  margin: 2.5rem 0 1.5rem;
+}
+.g-heading-s::before {
+  content: "-";
+  margin-right: 0.4rem;
+}
+
+.g-example-box .g-example {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.8rem;
+}
+.g-example-box .g-example.row {
+  flex-direction: row;
+}
+.g-example-box .g-example > div {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=c_customized_oh.css.map */

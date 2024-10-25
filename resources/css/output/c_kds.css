@@ -1,0 +1,1993 @@
+@charset "UTF-8";
+/* 공통 */
+/* 공통 */
+/* **** area mixin ****/
+/* **** text attr ****/
+/* **** scroll ****/
+/* **** form mixin ****/
+.text-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-primary {
+  color: #246BEB;
+}
+
+.bg-primary {
+  background-color: #246BEB;
+}
+
+.text-secondary {
+  color: #003675;
+}
+
+.bg-secondary {
+  background-color: #003675;
+}
+
+.text-point {
+  color: #E71825;
+}
+
+.bg-point {
+  background-color: #E71825;
+}
+
+.text-danger {
+  color: #EB003B;
+}
+
+.bg-danger {
+  background-color: #EB003B;
+}
+
+.text-warning {
+  color: #FFB724;
+}
+
+.bg-warning {
+  background-color: #FFB724;
+}
+
+.text-success {
+  color: #008A1E;
+}
+
+.bg-success {
+  background-color: #008A1E;
+}
+
+.text-information {
+  color: #2768FF;
+}
+
+.bg-information {
+  background-color: #2768FF;
+}
+
+.text-primary-5 {
+  color: #EFF5FF;
+}
+
+.bg-primary-5 {
+  background-color: #EFF5FF;
+}
+
+.text-primary-10 {
+  color: #D3E1FB;
+}
+
+.bg-primary-10 {
+  background-color: #D3E1FB;
+}
+
+.text-primary-20 {
+  color: #A7C4F7;
+}
+
+.bg-primary-20 {
+  background-color: #A7C4F7;
+}
+
+.text-primary-30 {
+  color: #7CA6F3;
+}
+
+.bg-primary-30 {
+  background-color: #7CA6F3;
+}
+
+.text-primary-40 {
+  color: #5089EF;
+}
+
+.bg-primary-40 {
+  background-color: #5089EF;
+}
+
+.text-primary-60 {
+  color: #1D56BC;
+}
+
+.bg-primary-60 {
+  background-color: #1D56BC;
+}
+
+.text-primary-70 {
+  color: #16408D;
+}
+
+.bg-primary-70 {
+  background-color: #16408D;
+}
+
+.text-primary-80 {
+  color: #0E2B5E;
+}
+
+.bg-primary-80 {
+  background-color: #0E2B5E;
+}
+
+.text-primary-90 {
+  color: #07152F;
+}
+
+.bg-primary-90 {
+  background-color: #07152F;
+}
+
+.text-secondary-5 {
+  color: #EDF1F5;
+}
+
+.bg-secondary-5 {
+  background-color: #EDF1F5;
+}
+
+.text-secondary-10 {
+  color: #CDD7E4;
+}
+
+.bg-secondary-10 {
+  background-color: #CDD7E4;
+}
+
+.text-secondary-20 {
+  color: #B4C4D6;
+}
+
+.bg-secondary-20 {
+  background-color: #B4C4D6;
+}
+
+.text-secondary-30 {
+  color: #99B0CB;
+}
+
+.bg-secondary-30 {
+  background-color: #99B0CB;
+}
+
+.text-secondary-40 {
+  color: #2A5C96;
+}
+
+.bg-secondary-40 {
+  background-color: #2A5C96;
+}
+
+.text-secondary-60 {
+  color: #002B5E;
+}
+
+.bg-secondary-60 {
+  background-color: #002B5E;
+}
+
+.text-secondary-70 {
+  color: #002046;
+}
+
+.bg-secondary-70 {
+  background-color: #002046;
+}
+
+.text-secondary-80 {
+  color: #00162F;
+}
+
+.bg-secondary-80 {
+  background-color: #00162F;
+}
+
+.text-secondary-90 {
+  color: #000B17;
+}
+
+.bg-secondary-90 {
+  background-color: #000B17;
+}
+
+.text-point-5 {
+  color: #FDF2F3;
+}
+
+.bg-point-5 {
+  background-color: #FDF2F3;
+}
+
+.text-point-10 {
+  color: #FAD1D3;
+}
+
+.bg-point-10 {
+  background-color: #FAD1D3;
+}
+
+.text-point-20 {
+  color: #F5A3A8;
+}
+
+.bg-point-20 {
+  background-color: #F5A3A8;
+}
+
+.text-point-30 {
+  color: #F1747C;
+}
+
+.bg-point-30 {
+  background-color: #F1747C;
+}
+
+.text-point-40 {
+  color: #EC4651;
+}
+
+.bg-point-40 {
+  background-color: #EC4651;
+}
+
+.text-point-60 {
+  color: #B9131E;
+}
+
+.bg-point-60 {
+  background-color: #B9131E;
+}
+
+.text-point-70 {
+  color: #8B0E16;
+}
+
+.bg-point-70 {
+  background-color: #8B0E16;
+}
+
+.text-point-80 {
+  color: #5C0A0F;
+}
+
+.bg-point-80 {
+  background-color: #5C0A0F;
+}
+
+.text-point-90 {
+  color: #2E0507;
+}
+
+.bg-point-90 {
+  background-color: #2E0507;
+}
+
+.text-gray-5 {
+  color: #F8F8F8;
+}
+
+.bg-gray-5 {
+  background-color: #F8F8F8;
+}
+
+.text-gray-10 {
+  color: #F0F0F0;
+}
+
+.bg-gray-10 {
+  background-color: #F0F0F0;
+}
+
+.text-gray-20 {
+  color: #E4E4E4;
+}
+
+.bg-gray-20 {
+  background-color: #E4E4E4;
+}
+
+.text-gray-30 {
+  color: #D8D8D8;
+}
+
+.bg-gray-30 {
+  background-color: #D8D8D8;
+}
+
+.text-gray-40 {
+  color: #C6C6C6;
+}
+
+.bg-gray-40 {
+  background-color: #C6C6C6;
+}
+
+.text-gray-50 {
+  color: #8E8E8E;
+}
+
+.bg-gray-50 {
+  background-color: #8E8E8E;
+}
+
+.text-gray-60 {
+  color: #717171;
+}
+
+.bg-gray-60 {
+  background-color: #717171;
+}
+
+.text-gray-70 {
+  color: #555555;
+}
+
+.bg-gray-70 {
+  background-color: #555555;
+}
+
+.text-gray-80 {
+  color: #2D2D2D;
+}
+
+.bg-gray-80 {
+  background-color: #2D2D2D;
+}
+
+.text-gray-90 {
+  color: #1D1D1D;
+}
+
+.bg-gray-90 {
+  background-color: #1D1D1D;
+}
+
+/** fonts setting **/
+/* default - Regular */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../fonts/PretendardGOV-Regular.subset.woff") format("woff");
+}
+/* Medium */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../fonts/PretendardGOV-Medium.subset.woff") format("woff");
+}
+/* Bold */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../fonts/PretendardGOV-Bold.subset.woff") format("woff");
+}
+:root {
+  --krds-white: #fff;
+  --krds-black: #000;
+  --krds-primary: #246BEB;
+  --krds-secondary: #003675;
+  --krds-point: #E71825;
+  --krds-danger: #EB003B;
+  --krds-warning: #FFB724;
+  --krds-success: #008A1E;
+  --krds-information: #2768FF;
+  --krds-primary-5: #EFF5FF;
+  --krds-primary-10: #D3E1FB;
+  --krds-primary-20: #A7C4F7;
+  --krds-primary-30: #7CA6F3;
+  --krds-primary-40: #5089EF;
+  --krds-primary-60: #1D56BC;
+  --krds-primary-70: #16408D;
+  --krds-primary-80: #0E2B5E;
+  --krds-primary-90: #07152F;
+  --krds-secondary-5: #EDF1F5;
+  --krds-secondary-10: #CDD7E4;
+  --krds-secondary-20: #B4C4D6;
+  --krds-secondary-30: #99B0CB;
+  --krds-secondary-40: #2A5C96;
+  --krds-secondary-60: #002B5E;
+  --krds-secondary-70: #002046;
+  --krds-secondary-80: #00162F;
+  --krds-secondary-90: #000B17;
+  --krds-point-5: #FDF2F3;
+  --krds-point-10: #FAD1D3;
+  --krds-point-20: #F5A3A8;
+  --krds-point-30: #F1747C;
+  --krds-point-40: #EC4651;
+  --krds-point-60: #B9131E;
+  --krds-point-70: #8B0E16;
+  --krds-point-80: #5C0A0F;
+  --krds-point-90: #2E0507;
+  --krds-gray-5: #F8F8F8;
+  --krds-gray-10: #F0F0F0;
+  --krds-gray-20: #E4E4E4;
+  --krds-gray-30: #D8D8D8;
+  --krds-gray-40: #C6C6C6;
+  --krds-gray-50: #8E8E8E;
+  --krds-gray-60: #717171;
+  --krds-gray-70: #555555;
+  --krds-gray-80: #2D2D2D;
+  --krds-gray-90: #1D1D1D;
+  --krds-fz-display-sm: 4rem;
+  --krds-fz-display-md: 5rem;
+  --krds-fz-display-lg: 6.6rem;
+  --krds-fz-heading-sm: 3.2rem;
+  --krds-fz-heading-md: 4rem;
+  --krds-fz-heading-lg: 5rem;
+  --krds-fz-title-xsm: 1.5rem;
+  --krds-fz-title-sm: 1.7rem;
+  --krds-fz-title-md: 1.9rem;
+  --krds-fz-title-lg: 2.1rem;
+  --krds-fz-title-xlg: 2.5rem;
+  --krds-fz-title-xxlg: 3.2rem;
+  --krds-fz-body-sm: 1.5rem;
+  --krds-fz-body-md: 1.7rem;
+  --krds-fz-body-lg: 1.9rem;
+  --krds-fz-link-sm: 1.5rem;
+  --krds-fz-link-md: 1.7rem;
+  --krds-fz-link-lg: 1.9rem;
+  --krds-fz-detail-sm: 1.3rem;
+  --krds-fz-detail-md: 1.5rem;
+  --krds-fz-detail-lg: 1.7rem;
+  --krds-fz-label-xsm: 1.3rem;
+  --krds-fz-label-sm: 1.5rem;
+  --krds-fz-label-md: 1.7rem;
+  --krds-fz-label-lg: 1.9rem;
+  --krds-rd-1: .1rem;
+  --krds-rd-2: .2rem;
+  --krds-rd-4: .4rem;
+  --krds-rd-6: .6rem;
+  --krds-rd-8: .8rem;
+  --krds-rd-10: 1rem;
+  --krds-rd-12: 1.2rem;
+  --krds-rd-full: 100%;
+  --krds-btn-h-xsm: 3.2rem;
+  --krds-btn-h-sm: 4rem;
+  --krds-btn-h-md: 4.8rem;
+  --krds-btn-h-lg: 5.6rem;
+  --krds-btn-h-xlg: 6.4rem;
+  --krds-btn-px-xsm: 1rem;
+  --krds-btn-px-sm: 1.2rem;
+  --krds-btn-px-md: 1.6rem;
+  --krds-btn-px-lg: 2rem;
+  --krds-btn-px-xlg: 2.4rem;
+  --krds-btn-rd-xsm: .6rem;
+  --krds-btn-rd-sm: .6rem;
+  --krds-btn-rd-md: .8rem;
+  --krds-btn-rd-lg: .8rem;
+  --krds-btn-rd-xlg: .8rem;
+  --krds-btn-fz-xsm: 1.5rem;
+  --krds-btn-fz-sm: 1.7rem;
+  --krds-btn-fz-md: 1.7rem;
+  --krds-btn-fz-lg: 1.9rem;
+  --krds-btn-fz-xlg: 1.9rem;
+  --krds-btnChipFill-h-md: 3.2rem;
+  --krds-btnChipFill-h-lg: 3.6rem;
+  --krds-btnChipFill-pd-md: 0rem 1.2rem;
+  --krds-btnChipFill-pd-lg: 0rem 1.2rem;
+  --krds-btnChipFill-rd-md: .6rem;
+  --krds-btnChipFill-rd-lg: .6rem;
+  --krds-btnChipFill-fz-md: 1.5rem;
+  --krds-btnChipFill-fz-lg: 1.7rem;
+  --krds-btnChipOutline-h-md: 3.2rem;
+  --krds-btnChipOutline-h-lg: 3.6rem;
+  --krds-btnChipOutline-pd-md: 0rem 1.2rem;
+  --krds-btnChipOutline-pd-lg: 0rem 1.2rem;
+  --krds-btnChipOutline-rd-md: 10rem;
+  --krds-btnChipOutline-rd-lg: 10rem;
+  --krds-btnChipOutline-fz-md: 1.5rem;
+  --krds-btnChipOutline-fz-lg: 1.7rem;
+  --krds-btnChipOutline-gap-md: .2rem;
+  --krds-btnChipOutline-gap-lg: .2rem;
+  --krds-btnChipOutline-size-md: 1.2rem;
+  --krds-btnChipOutline-size-lg: 1.6rem;
+  --krds-input-h-sm: 4rem;
+  --krds-input-h-md: 4.8rem;
+  --krds-input-h-lg: 5.6rem;
+  --krds-input-h-xlg: 8rem;
+  --krds-input-px-sm: 1.6rem;
+  --krds-input-px-md: 1.6rem;
+  --krds-input-px-lg: 1.6rem;
+  --krds-input-px-xlg: 2.4rem;
+  --krds-input-rd-sm: .6rem;
+  --krds-input-rd-md: .8rem;
+  --krds-input-rd-lg: .8rem;
+  --krds-input-rd-xlg: 1.2rem;
+  --krds-input-fz-sm: 1.5rem;
+  --krds-input-fz-md: 1.7rem;
+  --krds-input-fz-lg: 1.9rem;
+  --krds-input-fz-xlg: 2.5rem;
+  --krds-rdo-size-sm: 1.6rem;
+  --krds-rdo-size-md: 2rem;
+  --krds-rdo-size-lg: 2.4rem;
+  --krds-rdo-chk-sm: .8rem;
+  --krds-rdo-chk-md: 1rem;
+  --krds-rdo-chk-lg: 1.4rem;
+  --krds-rdo-pos-sm: .2rem;
+  --krds-rdo-pos-md: .5rem;
+  --krds-rdo-pos-lg: 1rem;
+  --krds-rdo-fz-sm: 1.5rem;
+  --krds-rdo-fz-md: 1.7rem;
+  --krds-rdo-fz-lg: 1.9rem;
+  --krds-chk-size-sm: 1.6rem;
+  --krds-chk-size-md: 2rem;
+  --krds-chk-size-lg: 2.4rem;
+  --krds-chk-primary-chk-sm: 1.2rem;
+  --krds-chk-primary-chk-md: 1.6rem;
+  --krds-chk-primary-chk-lg: 2rem;
+  --krds-chk-secondary-chk-md: 2rem;
+  --krds-chk-pos-md: .5rem;
+  --krds-chk-fz-sm: 1.5rem;
+  --krds-chk-fz-md: 1.7rem;
+  --krds-chk-fz-lg: 1.9rem;
+  --krds-select-h-sm: 4rem;
+  --krds-select-h-md: 4.8rem;
+  --krds-select-h-lg: 5.6rem;
+  --krds-select-pd-sm: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-md: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-lg: 0 5.2rem 0 1.6rem;
+  --krds-select-rd-sm: .6rem;
+  --krds-select-rd-md: .8rem;
+  --krds-select-rd-lg: .8rem;
+  --krds-select-fz-sm: 1.5rem;
+  --krds-select-fz-md: 1.7rem;
+  --krds-select-fz-lg: 1.9rem;
+  --krds-select-rn-sm: 1.6rem;
+  --krds-select-rn-md: 1.6rem;
+  --krds-select-rn-lg: 1.6rem;
+  --krds-select-bgs-sm: 2rem;
+  --krds-select-bgs-md: 2rem;
+  --krds-select-bgs-lg: 2.4rem;
+  --krds-switch-h-md: 2rem;
+  --krds-switch-h-lg: 2.4rem;
+  --krds-switch-w-md: 3.2rem;
+  --krds-switch-w-lg: 4rem;
+  --krds-switch-b-md: 1.6rem;
+  --krds-switch-b-lg: 2rem;
+  --krds-switch-br-md: 0.2rem;
+  --krds-switch-br-lg: 0.2rem;
+  --krds-switch-pd-md: 0.8rem;
+  --krds-switch-pd-lg: 0.8rem;
+  --krds-switch-rd-md: 4rem;
+  --krds-switch-rd-lg: 4rem;
+  --krds-switch-fz-md: 1.7rem;
+  --krds-switch-fz-lg: 1.9rem;
+  --krds-rdoChipOutline-h-sm: 3.2rem;
+  --krds-rdoChipOutline-h-md: 4rem;
+  --krds-rdoChipOutline-h-lg: 4.8rem;
+  --krds-rdoChipOutline-pd-sm: 0 1rem;
+  --krds-rdoChipOutline-pd-md: 0 1.2rem;
+  --krds-rdoChipOutline-pd-lg: 0 1.6rem;
+  --krds-rdoChipOutline-rd-sm: .6rem;
+  --krds-rdoChipOutline-rd-md: .6rem;
+  --krds-rdoChipOutline-rd-lg: .8rem;
+  --krds-rdoChipOutline-fz-sm: 1.5rem;
+  --krds-rdoChipOutline-fz-md: 1.7rem;
+  --krds-rdoChipOutline-fz-lg: 1.7rem;
+  --krds-chkChipOutline-h-sm: 3.2rem;
+  --krds-chkChipOutline-h-md: 4rem;
+  --krds-chkChipOutline-h-lg: 4.8rem;
+  --krds-chkChipOutline-pd-sm: 0 1rem 0 .8rem;
+  --krds-chkChipOutline-pd-md: 0 1.2rem 0 1rem;
+  --krds-chkChipOutline-pd-lg: 0 1.6rem 0 1.2rem;
+  --krds-chkChipOutline-rd-sm: .6rem;
+  --krds-chkChipOutline-rd-md: .6rem;
+  --krds-chkChipOutline-rd-lg: .8rem;
+  --krds-chkChipOutline-fz-sm: 1.5rem;
+  --krds-chkChipOutline-fz-md: 1.7rem;
+  --krds-chkChipOutline-fz-lg: 1.7rem;
+  --krds-chkChipOutline-gap-sm: .4rem;
+  --krds-chkChipOutline-gap-md: .4rem;
+  --krds-chkChipOutline-gap-lg: .4rem;
+  --krds-chkChipOutline-ico-sm: 1.6rem;
+  --krds-chkChipOutline-ico-md: 2rem;
+  --krds-chkChipOutline-ico-lg: 2rem;
+  --krds-tab-h-full: 5.6rem;
+  --krds-tab-h-fill: 4.8rem;
+  --krds-tab-h-line: 4.8rem;
+  --krds-tab-fz-full: 1.9rem;
+  --krds-tab-fz-fill: 1.9rem;
+  --krds-tab-fz-ilne: 1.9rem;
+  --krds-tab-px-full: 0;
+  --krds-tab-px-fill: 1.6rem;
+  --krds-tab-px-line: .2rem;
+  --krds-tab-ml-full: 0;
+  --krds-tab-ml-fill: .8rem;
+  --krds-tab-ml-line: 1.6rem;
+  --krds-tab-rd-full: .8rem;
+  --krds-tab-rd-fill: .8rem;
+  --krds-tab-rd-line: 0;
+  --krds-spacer-50: 20rem;
+  --krds-spacer-49: 19.6rem;
+  --krds-spacer-48: 19.2rem;
+  --krds-spacer-47: 18.8rem;
+  --krds-spacer-46: 18.4rem;
+  --krds-spacer-45: 18rem;
+  --krds-spacer-44: 17.6rem;
+  --krds-spacer-43: 17.2rem;
+  --krds-spacer-42: 16.8rem;
+  --krds-spacer-41: 16.4rem;
+  --krds-spacer-40: 16rem;
+  --krds-spacer-39: 15.6rem;
+  --krds-spacer-38: 15.2rem;
+  --krds-spacer-37: 14.8rem;
+  --krds-spacer-36: 14.4rem;
+  --krds-spacer-35: 14rem;
+  --krds-spacer-34: 13.6rem;
+  --krds-spacer-33: 13.2rem;
+  --krds-spacer-32: 12.8rem;
+  --krds-spacer-31: 12.4rem;
+  --krds-spacer-30: 12rem;
+  --krds-spacer-29: 11.6rem;
+  --krds-spacer-28: 11.2rem;
+  --krds-spacer-27: 10.8rem;
+  --krds-spacer-26: 10.4rem;
+  --krds-spacer-25: 10rem;
+  --krds-spacer-24: 9.6rem;
+  --krds-spacer-23: 9.2rem;
+  --krds-spacer-22: 8.8rem;
+  --krds-spacer-21: 8.4rem;
+  --krds-spacer-20: 8rem;
+  --krds-spacer-19: 7.6rem;
+  --krds-spacer-18: 7.2rem;
+  --krds-spacer-17: 6.8rem;
+  --krds-spacer-16: 6.4rem;
+  --krds-spacer-15: 6rem;
+  --krds-spacer-14: 5.6rem;
+  --krds-spacer-13: 5.2rem;
+  --krds-spacer-12: 4.8rem;
+  --krds-spacer-11: 4.4rem;
+  --krds-spacer-10: 4rem;
+  --krds-spacer-9: 3.6rem;
+  --krds-spacer-8: 3.2rem;
+  --krds-spacer-7: 2.8rem;
+  --krds-spacer-6: 2.4rem;
+  --krds-spacer-5: 2rem;
+  --krds-spacer-4: 1.6rem;
+  --krds-spacer-3: 1.2rem;
+  --krds-spacer-2: 0.8rem;
+  --krds-spacer-1: 0.4rem;
+  --krds-spacer-0: 0;
+  --krds-spacer-default: .1rem;
+  --krds-spacer-default2: .2rem;
+  --krds-spacer-full: 100%;
+}
+.btn.xsm {
+  height: 3.2rem;
+  padding: 0 var(--krds-btn-px-xsm);
+  border-radius: var(--krds-btn-rd-xsm);
+  font-size: var(--krds-btn-fz-xsm);
+}
+
+.btn.sm {
+  height: 4rem;
+  padding: 0 var(--krds-btn-px-sm);
+  border-radius: var(--krds-btn-rd-sm);
+  font-size: var(--krds-btn-fz-sm);
+}
+
+.btn.md {
+  height: 4.8rem;
+  padding: 0 var(--krds-btn-px-md);
+  border-radius: var(--krds-btn-rd-md);
+  font-size: var(--krds-btn-fz-md);
+}
+
+.btn.lg {
+  height: 5.6rem;
+  padding: 0 var(--krds-btn-px-lg);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-btn-fz-lg);
+}
+
+.btn.xlg {
+  height: 6.4rem;
+  padding: 0 var(--krds-btn-px-xlg);
+  border-radius: var(--krds-btn-rd-xlg);
+  font-size: var(--krds-btn-fz-xlg);
+}
+
+.btn-chip-fill.md {
+  height: var(--krds-btnChipFill-h-md);
+  padding: var(--krds-btnChipFill-pd-md);
+  border-radius: var(--krds-btnChipFill-rd-md);
+  font-size: var(--krds-btnChipFill-fz-md);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill.lg {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline.md {
+  height: var(--krds-btnChipOutline-h-md);
+  padding: var(--krds-btnChipOutline-pd-md);
+  border-radius: var(--krds-btnChipOutline-rd-md);
+  font-size: var(--krds-btnChipOutline-fz-md);
+}
+.btn-chip-outline.md .btn-del {
+  width: var(--krds-btnChipOutline-size-md);
+  height: var(--krds-btnChipOutline-size-md);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline.lg {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline.lg .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../img/component/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.form-control.sm {
+  height: 4rem;
+  padding: 0 var(--krds-input-px-sm);
+  border-radius: var(--krds-input-rd-sm);
+  font-size: var(--krds-input-fz-sm);
+}
+
+.form-control.md {
+  height: 4.8rem;
+  padding: 0 var(--krds-input-px-md);
+  border-radius: var(--krds-input-rd-md);
+  font-size: var(--krds-input-fz-md);
+}
+
+.form-control.lg {
+  height: 5.6rem;
+  padding: 0 var(--krds-input-px-lg);
+  border-radius: var(--krds-input-rd-lg);
+  font-size: var(--krds-input-fz-lg);
+}
+
+.form-control.xlg {
+  height: 8rem;
+  padding: 0 var(--krds-input-px-xlg);
+  border-radius: var(--krds-input-rd-xlg);
+  font-size: var(--krds-input-fz-xlg);
+}
+
+.form-check.sm > [type=radio] ~ label {
+  font-size: var(--krds-rdo-fz-sm);
+  line-height: var(--krds-rdo-size-sm);
+  min-height: var(--krds-rdo-size-sm);
+  padding-left: calc(var(--krds-rdo-size-sm) + var(--krds-spacer-2));
+}
+.form-check.sm > [type=radio] ~ label::before {
+  width: var(--krds-rdo-size-sm);
+  height: var(--krds-rdo-size-sm);
+}
+.form-check.sm > [type=radio] ~ label::after {
+  top: calc((var(--krds-rdo-size-sm) - var(--krds-rdo-chk-sm)) / 2);
+  left: calc((var(--krds-rdo-size-sm) - var(--krds-rdo-chk-sm)) / 2);
+  width: var(--krds-rdo-chk-sm);
+  height: var(--krds-rdo-chk-sm);
+}
+
+.form-check.md > [type=radio] ~ label {
+  font-size: var(--krds-rdo-fz-md);
+  line-height: var(--krds-rdo-size-md);
+  min-height: var(--krds-rdo-size-md);
+  padding-left: calc(var(--krds-rdo-size-md) + var(--krds-spacer-2));
+}
+.form-check.md > [type=radio] ~ label::before {
+  width: var(--krds-rdo-size-md);
+  height: var(--krds-rdo-size-md);
+}
+.form-check.md > [type=radio] ~ label::after {
+  top: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  left: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  width: var(--krds-rdo-chk-md);
+  height: var(--krds-rdo-chk-md);
+}
+
+.form-check.lg > [type=radio] ~ label {
+  font-size: var(--krds-rdo-fz-lg);
+  line-height: var(--krds-rdo-size-lg);
+  min-height: var(--krds-rdo-size-lg);
+  padding-left: calc(var(--krds-rdo-size-lg) + var(--krds-spacer-2));
+}
+.form-check.lg > [type=radio] ~ label::before {
+  width: var(--krds-rdo-size-lg);
+  height: var(--krds-rdo-size-lg);
+}
+.form-check.lg > [type=radio] ~ label::after {
+  top: calc((var(--krds-rdo-size-lg) - var(--krds-rdo-chk-lg)) / 2);
+  left: calc((var(--krds-rdo-size-lg) - var(--krds-rdo-chk-lg)) / 2);
+  width: var(--krds-rdo-chk-lg);
+  height: var(--krds-rdo-chk-lg);
+}
+
+.form-check.sm > [type=checkbox] ~ label {
+  font-size: var(--krds-chk-fz-sm);
+  line-height: var(--krds-chk-size-sm);
+  min-height: var(--krds-chk-size-sm);
+  padding-left: calc(var(--krds-chk-size-sm) + var(--krds-spacer-2));
+}
+.form-check.sm > [type=checkbox] ~ label::before {
+  width: var(--krds-chk-size-sm);
+  height: var(--krds-chk-size-sm);
+}
+.form-check.sm > [type=checkbox] ~ label::after {
+  width: var(--krds-chk-primary-chk-sm);
+  height: var(--krds-chk-primary-chk-sm);
+}
+.form-check.sm.ico-only > [type=checkbox] ~ label {
+  padding-left: var(--krds-chk-size-sm);
+}
+
+.form-check.md > [type=checkbox] ~ label {
+  font-size: var(--krds-chk-fz-md);
+  line-height: var(--krds-chk-size-md);
+  min-height: var(--krds-chk-size-md);
+  padding-left: calc(var(--krds-chk-size-md) + var(--krds-spacer-2));
+}
+.form-check.md > [type=checkbox] ~ label::before {
+  width: var(--krds-chk-size-md);
+  height: var(--krds-chk-size-md);
+}
+.form-check.md > [type=checkbox] ~ label::after {
+  width: var(--krds-chk-primary-chk-md);
+  height: var(--krds-chk-primary-chk-md);
+}
+.form-check.md.ico-only > [type=checkbox] ~ label {
+  padding-left: var(--krds-chk-size-md);
+}
+
+.form-check.lg > [type=checkbox] ~ label {
+  font-size: var(--krds-chk-fz-lg);
+  line-height: var(--krds-chk-size-lg);
+  min-height: var(--krds-chk-size-lg);
+  padding-left: calc(var(--krds-chk-size-lg) + var(--krds-spacer-2));
+}
+.form-check.lg > [type=checkbox] ~ label::before {
+  width: var(--krds-chk-size-lg);
+  height: var(--krds-chk-size-lg);
+}
+.form-check.lg > [type=checkbox] ~ label::after {
+  width: var(--krds-chk-primary-chk-lg);
+  height: var(--krds-chk-primary-chk-lg);
+}
+.form-check.lg.ico-only > [type=checkbox] ~ label {
+  padding-left: var(--krds-chk-size-lg);
+}
+
+.form-select.sm {
+  height: 4rem;
+  padding: var(--krds-select-pd-sm);
+  border-radius: var(--krds-select-rd-sm);
+  font-size: var(--krds-select-fz-sm);
+  background-size: var(--krds-select-bgs-sm);
+}
+
+.form-select.md {
+  height: 4.8rem;
+  padding: var(--krds-select-pd-md);
+  border-radius: var(--krds-select-rd-md);
+  font-size: var(--krds-select-fz-md);
+  background-size: var(--krds-select-bgs-md);
+}
+
+.form-select.lg {
+  height: 5.6rem;
+  padding: var(--krds-select-pd-lg);
+  border-radius: var(--krds-select-rd-lg);
+  font-size: var(--krds-select-fz-lg);
+  background-size: var(--krds-select-bgs-lg);
+}
+
+.form-switch.md [type=checkbox] ~ i::before {
+  width: var(--krds-switch-b-md);
+  height: var(--krds-switch-b-md);
+  border-radius: var(--krds-switch-rd-md);
+}
+.form-switch.md [type=checkbox] ~ i::after {
+  width: var(--krds-switch-w-md);
+  height: var(--krds-switch-h-md);
+}
+.form-switch.md [type=checkbox] ~ label {
+  padding-left: calc(var(--krds-switch-w-md) + var(--krds-switch-pd-md));
+  margin-left: calc(var(--krds-switch-w-md) * -1);
+  font-size: var(--krds-switch-fz-md);
+}
+.form-switch.md [type=checkbox]:checked ~ i::before {
+  position: absolute;
+  left: calc(var(--krds-switch-w-md) - var(--krds-switch-b-md) - var(--krds-switch-br-md));
+}
+
+.form-switch.lg [type=checkbox] ~ i::before {
+  width: var(--krds-switch-b-lg);
+  height: var(--krds-switch-b-lg);
+  border-radius: var(--krds-switch-rd-lg);
+}
+.form-switch.lg [type=checkbox] ~ i::after {
+  width: var(--krds-switch-w-lg);
+  height: var(--krds-switch-h-lg);
+}
+.form-switch.lg [type=checkbox] ~ label {
+  padding-left: calc(var(--krds-switch-w-lg) + var(--krds-switch-pd-lg));
+  margin-left: calc(var(--krds-switch-w-lg) * -1);
+  font-size: var(--krds-switch-fz-lg);
+}
+.form-switch.lg [type=checkbox]:checked ~ i::before {
+  position: absolute;
+  left: calc(var(--krds-switch-w-lg) - var(--krds-switch-b-lg) - var(--krds-switch-br-lg));
+}
+
+.form-chip.sm .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-rdoChipOutline-h-sm);
+  padding: var(--krds-rdoChipOutline-pd-sm);
+  border-radius: var(--krds-rdoChipOutline-rd-sm);
+  font-size: var(--krds-rdoChipOutline-fz-sm);
+}
+.form-chip.sm .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.sm .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.sm .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-rdoChipOutline-h-sm);
+  padding: var(--krds-rdoChipOutline-pd-sm);
+  border-radius: var(--krds-rdoChipOutline-rd-sm);
+  font-size: var(--krds-rdoChipOutline-fz-sm);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip.md .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-rdoChipOutline-h-md);
+  padding: var(--krds-rdoChipOutline-pd-md);
+  border-radius: var(--krds-rdoChipOutline-rd-md);
+  font-size: var(--krds-rdoChipOutline-fz-md);
+}
+.form-chip.md .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.md .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.md .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-rdoChipOutline-h-md);
+  padding: var(--krds-rdoChipOutline-pd-md);
+  border-radius: var(--krds-rdoChipOutline-rd-md);
+  font-size: var(--krds-rdoChipOutline-fz-md);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip.lg .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-rdoChipOutline-h-lg);
+  padding: var(--krds-rdoChipOutline-pd-lg);
+  border-radius: var(--krds-rdoChipOutline-rd-lg);
+  font-size: var(--krds-rdoChipOutline-fz-lg);
+}
+.form-chip.lg .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.lg .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.lg .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-rdoChipOutline-h-lg);
+  padding: var(--krds-rdoChipOutline-pd-lg);
+  border-radius: var(--krds-rdoChipOutline-rd-lg);
+  font-size: var(--krds-rdoChipOutline-fz-lg);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-rdoChipOutline-h-sm);
+  padding: var(--krds-rdoChipOutline-pd-sm);
+  border-radius: var(--krds-rdoChipOutline-rd-sm);
+  font-size: var(--krds-rdoChipOutline-fz-sm);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-rdoChipOutline-h-md);
+  padding: var(--krds-rdoChipOutline-pd-md);
+  border-radius: var(--krds-rdoChipOutline-rd-md);
+  font-size: var(--krds-rdoChipOutline-fz-md);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-rdoChipOutline-h-lg);
+  padding: var(--krds-rdoChipOutline-pd-lg);
+  border-radius: var(--krds-rdoChipOutline-rd-lg);
+  font-size: var(--krds-rdoChipOutline-fz-lg);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-rdoChipOutline-h-sm);
+  padding: var(--krds-rdoChipOutline-pd-sm);
+  border-radius: var(--krds-rdoChipOutline-rd-sm);
+  font-size: var(--krds-rdoChipOutline-fz-sm);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-rdoChipOutline-h-md);
+  padding: var(--krds-rdoChipOutline-pd-md);
+  border-radius: var(--krds-rdoChipOutline-rd-md);
+  font-size: var(--krds-rdoChipOutline-fz-md);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-rdoChipOutline-h-lg);
+  padding: var(--krds-rdoChipOutline-pd-lg);
+  border-radius: var(--krds-rdoChipOutline-rd-lg);
+  font-size: var(--krds-rdoChipOutline-fz-lg);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-rdoChipOutline-h-sm);
+  padding: var(--krds-rdoChipOutline-pd-sm);
+  border-radius: var(--krds-rdoChipOutline-rd-sm);
+  font-size: var(--krds-rdoChipOutline-fz-sm);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-rdoChipOutline-h-md);
+  padding: var(--krds-rdoChipOutline-pd-md);
+  border-radius: var(--krds-rdoChipOutline-rd-md);
+  font-size: var(--krds-rdoChipOutline-fz-md);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .radio ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-rdoChipOutline-h-lg);
+  padding: var(--krds-rdoChipOutline-pd-lg);
+  border-radius: var(--krds-rdoChipOutline-rd-lg);
+  font-size: var(--krds-rdoChipOutline-fz-lg);
+}
+.form-chip .radio ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .radio:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .radio:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip.sm .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip.sm .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.sm .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.sm .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip.md .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip.md .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.md .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.md .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip.lg .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip.lg .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip.lg .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip.lg .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-sm);
+  height: var(--krds-chkChipOutline-h-sm);
+  padding: var(--krds-chkChipOutline-pd-sm);
+  border-radius: var(--krds-chkChipOutline-rd-sm);
+  font-size: var(--krds-chkChipOutline-fz-sm);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-sm);
+  height: var(--krds-chkChipOutline-ico-sm);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-md);
+  height: var(--krds-chkChipOutline-h-md);
+  padding: var(--krds-chkChipOutline-pd-md);
+  border-radius: var(--krds-chkChipOutline-rd-md);
+  font-size: var(--krds-chkChipOutline-fz-md);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-md);
+  height: var(--krds-chkChipOutline-ico-md);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+.form-chip .checkbox ~ .form-chip-outline {
+  gap: var(--krds-chkChipOutline-gap-lg);
+  height: var(--krds-chkChipOutline-h-lg);
+  padding: var(--krds-chkChipOutline-pd-lg);
+  border-radius: var(--krds-chkChipOutline-rd-lg);
+  font-size: var(--krds-chkChipOutline-fz-lg);
+}
+.form-chip .checkbox ~ .form-chip-outline::before {
+  width: var(--krds-chkChipOutline-ico-lg);
+  height: var(--krds-chkChipOutline-ico-lg);
+  background: url(../../img/component/common/ico_check_chip.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.form-chip .checkbox:checked ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_checked.svg);
+}
+.form-chip .checkbox:disabled ~ .form-chip-outline::before {
+  background-image: url(../../img/component/common/ico_check_chip_disabled.svg);
+}
+
+@media (max-width: 1023px) {
+  /* input setting */
+  :root {
+    --krds-fz-display-sm: 2.5rem;
+    --krds-fz-display-md: 3.2rem;
+    --krds-fz-display-lg: 4rem;
+    --krds-fz-heading-sm: 2.5rem;
+    --krds-fz-heading-md: 3.2rem;
+    --krds-fz-heading-lg: 4rem;
+    --krds-fz-title-xxlg: 2.5rem;
+    /* input setting */
+    --krds-input-h-xlg: 5.6rem;
+    --krds-input-px-xlg: 1.6rem;
+    --krds-input-rd-xlg: .8rem;
+    --krds-input-fz-xlg: 1.9rem;
+  }
+  .form-control.xlg {
+    height: 5.6rem;
+    padding: 0 var(--krds-input-px-xlg);
+    border-radius: var(--krds-input-rd-xlg);
+    font-size: var(--krds-input-fz-xlg);
+  }
+}/*# sourceMappingURL=c_kds.css.map */

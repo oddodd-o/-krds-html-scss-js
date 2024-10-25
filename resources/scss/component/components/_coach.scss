@@ -12,40 +12,40 @@
   }
 
   .helper-sm-tit {
-    font-size: var(--fz-title-lg);
+    font-size: var(--#{$prefix}fz-title-lg);
     font-weight: map-get($fws, bold);
 
     + .helper-desc {
-      margin-top: var(--spacer-6);
+      margin-top: var(--#{$prefix}spacer-6);
     }
   }
 
   .helper-desc {
-    margin-bottom: var(--spacer-8);
-    font-size: var(--fz-body-md);
-    color: var(--gray-70);
+    margin-bottom: var(--#{$prefix}spacer-8);
+    font-size: var(--#{$prefix}fz-body-md);
+    color: var(--#{$prefix}gray-70);
   }
 
   .btn-wrap {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: var(--spacer-3);
+    gap: var(--#{$prefix}spacer-3);
 
     .btn-txt {
-      color: var(--gray-80);
+      color: var(--#{$prefix}gray-80);
     }
 
     + .accordion {
-      margin-top: var(--spacer-8);
+      margin-top: var(--#{$prefix}spacer-8);
     }
   }
 
   .page-btn {
-    margin-bottom: var(--spacer-9);
+    margin-bottom: var(--#{$prefix}spacer-9);
 
     .btn-txt {
-      font-size: var(--fz-title-lg);
+      font-size: var(--#{$prefix}fz-title-lg);
       font-weight: map-get($fws, bold);
     }
   }
@@ -55,37 +55,37 @@
 
     .btn-accordion {
       min-height: 5.4rem;
-      padding: var(--spacer-4) var(--spacer-8) var(--spacer-4) 0;
-      font-size: var(--fz-body-md);
+      padding: var(--#{$prefix}spacer-4) var(--#{$prefix}spacer-8) var(--#{$prefix}spacer-4) 0;
+      font-size: var(--#{$prefix}fz-body-md);
 
       &::after {
-        top: var(--spacer-4);
+        top: var(--#{$prefix}spacer-4);
       }
     }
 
     .accordion-body {
-      padding-top: var(--spacer-1);
+      padding-top: var(--#{$prefix}spacer-1);
 
       .info-txt {
-        font-size: var(--fz-body-md);
-        color: var(--gray-70);
+        font-size: var(--#{$prefix}fz-body-md);
+        color: var(--#{$prefix}gray-70);
 
         + .info-list {
-          margin-top: var(--spacer-8);
+          margin-top: var(--#{$prefix}spacer-8);
         }
       }
 
       .info-list {
         > li {
-          color: var(--gray-70);
+          color: var(--#{$prefix}gray-70);
 
           + li {
-            margin-top: var(--spacer-6);
+            margin-top: var(--#{$prefix}spacer-6);
           }
         }
 
         + .btn-wrap {
-          margin-top: var(--spacer-8);
+          margin-top: var(--#{$prefix}spacer-8);
         }
       }
     }
@@ -103,8 +103,8 @@
   &.txt-box,
   &.form-addr-result,
   .coach-btn {
-    border: 0.1rem solid var(--primary);
-    outline: 1rem solid var(--primary-5);
+    border: 0.1rem solid var(--#{$prefix}primary);
+    outline: 1rem solid var(--#{$prefix}primary-5);
   }
 
   .coach-balloon {
@@ -113,10 +113,10 @@
     display: flex;
     flex-direction: column;
     max-width: 36rem;
-    padding: var(--spacer-6);
-    background-color: var(--white);
-    border: 0.2rem solid var(--primary);
-    border-radius: var(--spacer-3);
+    padding: var(--#{$prefix}spacer-6);
+    background-color: var(--#{$prefix}white);
+    border: 0.2rem solid var(--#{$prefix}primary);
+    border-radius: var(--#{$prefix}spacer-3);
     box-shadow: rgba($black, 0.15) 0 0.2rem 0.8rem;
     right: 0;
     top: 0;
@@ -124,50 +124,50 @@
     word-break: break-all;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       width: 3.2rem;
       height: 1.7rem;
       bottom: -1.6rem;
       right: 2.4rem;
-      background-image: url("#{$url}/pattern/content/balloon-bottom.png");
+      background-image: url('#{$url}/pattern/content/balloon-bottom.png');
       background-repeat: no-repeat;
       background-size: contain;
     }
 
     .coach-tit {
-      color: var(--gray-70);
-      font-size: var(--fz-detail-sm);
-      margin-bottom: var(--spacer-4);
+      color: var(--#{$prefix}gray-70);
+      font-size: var(--#{$prefix}fz-detail-sm);
+      margin-bottom: var(--#{$prefix}spacer-4);
       font-weight: map-get($fws, normal);
     }
 
     .desc {
-      font-size: var(--fz-body-md);
+      font-size: var(--#{$prefix}fz-body-md);
     }
 
     .coach-controls {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: var(--spacer-3);
-      margin-top: var(--spacer-6);
+      gap: var(--#{$prefix}spacer-3);
+      margin-top: var(--#{$prefix}spacer-6);
 
       .num {
         display: flex;
-        font-size: var(--fz-body-md);
-        color: var(--gray-90);
+        font-size: var(--#{$prefix}fz-body-md);
+        color: var(--#{$prefix}gray-90);
 
         strong {
           display: flex;
-          color: var(--secondary);
+          color: var(--#{$prefix}secondary);
           font-weight: map-get($fws, normal);
 
           &::after {
-            content: "/";
-            color: var(--gray-90);
-            margin: 0 var(--spacer-1);
+            content: '/';
+            color: var(--#{$prefix}gray-90);
+            margin: 0 var(--#{$prefix}spacer-1);
           }
         }
       }
@@ -176,7 +176,7 @@
     .btn-wrap {
       display: flex;
       justify-content: flex-end;
-      gap: var(--spacer-4);
+      gap: var(--#{$prefix}spacer-4);
     }
   }
 }
@@ -184,28 +184,28 @@
 .coach-help-process {
   > li {
     + li {
-      margin-top: var(--spacer-10);
-      padding-top: var(--spacer-10);
-      border-top: 0.1rem solid var(--gray-30);
+      margin-top: var(--#{$prefix}spacer-10);
+      padding-top: var(--#{$prefix}spacer-10);
+      border-top: 0.1rem solid var(--#{$prefix}gray-30);
     }
   }
   .tit {
     display: flex;
-    gap: var(--spacer-2);
-    margin-bottom: var(--spacer-6);
-    font-size: var(--fz-title-md);
-    color: var(--gray-90);
+    gap: var(--#{$prefix}spacer-2);
+    margin-bottom: var(--#{$prefix}spacer-6);
+    font-size: var(--#{$prefix}fz-title-md);
+    color: var(--#{$prefix}gray-90);
 
     &.current {
-      color: var(--primary);
+      color: var(--#{$prefix}primary);
 
       &::before {
-        content: "";
+        content: '';
         flex-shrink: 0;
-        width: var(--spacer-5);
-        height: var(--spacer-5);
+        width: var(--#{$prefix}spacer-5);
+        height: var(--#{$prefix}spacer-5);
         margin-top: 0.4rem;
-        background: url("#{$url}/component/common/ico_step_active.svg") no-repeat;
+        background: url('#{$url}/component/common/ico_step_active.svg') no-repeat;
         background-size: contain;
       }
     }

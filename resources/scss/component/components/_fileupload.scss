@@ -1,76 +1,85 @@
 /* 파일 업로드 */
 .file-upload {
-  @include flex-layout($fd: column, $jc: center, $ai: center);
-  gap: var(--spacer-10);
-  padding: var(--spacer-16) var(--spacer-10);
-  border-radius: 12px;
-  border: 0.1rem dashed var(--krds-gray-40);
-  background-color: var(--krds-gray-10);
-  .txt {
-    font-size: var(--fz-body-lg);
-    text-align: center;
-  }
+    @include flex-layout($fd:column, $jc: center, $ai: center);
+    gap: var(--#{$prefix}spacer-10);
+    padding: var(--#{$prefix}spacer-16) var(--#{$prefix}spacer-10);
+    border-radius: 12px;
+    border: .1rem dashed var(--krds-gray-40);
+    background-color: var(--krds-gray-10);
+    .txt {
+        font-size: var(--#{$prefix}fz-body-lg);
+        text-align: center;
+    }
 }
 
 .file-upload-result {
-  margin-top: var(--spacer-6);
-  .upload-top {
-    @include flex-layout($ai: center);
-    .file-total {
-      flex: 1;
-      font-weight: map-get($fws, bold);
-      .current {
-        color: var(--primary);
-      }
+	display: flex;
+	flex-wrap: wrap;
+    margin-top: var(--#{$prefix}spacer-6 );
+    .upload-top {
+		flex: 1;
+		order: -1;
+        @include flex-layout($ai:center);
+        .file-total {
+            flex: 1;
+            font-weight: map-get($fws, bold);
+            .current {
+                color: var(--#{$prefix}primary);
+            }
+        }
     }
-  }
-  .upload-list {
-    @include flex-layout($fd: column, $ai: normal);
-    gap: var(--spacer-4);
-    margin-top: var(--spacer-6);
-    > li {
-      padding: var(--spacer-3) var(--spacer-4);
-      border-radius: var(--rd-6);
-      border: 0.1rem solid var(--gray-30);
-      &.is-error {
-        border: 0.2rem solid var(--danger);
-        background-color: var(--point-5);
+    .upload-list {
+        @include flex-layout($fd: column, $ai: normal);
+        gap: var(--#{$prefix}spacer-4);
+        margin-top: var(--#{$prefix}spacer-6);
+		width: 100%;
+        > li {
+            padding: var(--#{$prefix}spacer-3) var(--#{$prefix}spacer-4);
+            border-radius: var(--#{$prefix}rd-6);
+            border: .1rem solid var(--#{$prefix}gray-30);
+            &.is-error {
+                border: .2rem solid var(--#{$prefix}danger);
+                background-color: var(--#{$prefix}point-5);
+                .file-hint {
+                    color: var(--#{$prefix}danger);
+                }
+            }
+        }
+        .in {
+            @include flex-layout($ai:center);
+            gap: var(--#{$prefix}spacer-4);
+            > div {
+                display: inline-flex;
+            }
+            .file-name {
+                flex: 1;
+                @include ellipsis(1);
+            }
+            .file-btn {
+                gap: var(--#{$prefix}spacer-4);
+            }
+            .ico-invalid {
+                display: inline-flex;
+                width: 2.4rem;
+                height: 2.4rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                &.error {
+                    background-image: url(#{$url}/component/common/ico_invalid_error_20.svg);
+                }
+                &.ok {
+                    background-image: url(#{$url}/component/common/ico_invalid_ok_20.svg);
+                }
+            }
+        }
         .file-hint {
-          color: var(--danger);
+            padding-top: var(--#{$prefix}spacer-4);
+            margin-top: var(--#{$prefix}spacer-4);
+            border-top: .1rem solid var(--#{$prefix}gray-30);
         }
-      }
     }
-    .in {
-      @include flex-layout($ai: center);
-      gap: var(--spacer-4);
-      > div {
-        display: inline-flex;
-      }
-      .file-name {
-        flex: 1;
-        @include ellipsis(1);
-      }
-      .file-btn {
-        gap: var(--spacer-4);
-      }
-      .ico-invalid {
-        display: inline-flex;
-        width: 2.4rem;
-        height: 2.4rem;
-        background-repeat: no-repeat;
-        background-position: center;
-        &.error {
-          background-image: url(#{$url}/component/common/ico_invalid_error_20.svg);
-        }
-        &.ok {
-          background-image: url(#{$url}/component/common/ico_invalid_ok_20.svg);
-        }
-      }
-    }
-    .file-hint {
-      padding-top: var(--spacer-4);
-      margin-top: var(--spacer-4);
-      border-top: 0.1rem solid var(--gray-30);
-    }
-  }
+	.upload-delete-btn {
+		order: -1;
+		line-height: 1;
+	}
 }

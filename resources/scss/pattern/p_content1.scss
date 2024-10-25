@@ -1,0 +1,1144 @@
+@charset "utf-8";
+@import '../component/include';
+
+/* ***** CONTENT ***** */
+.conts-area {
+  @include flex-layout($ai: flex-start, $jc: flex-start, $fd: column);
+  gap: var(--#{$prefix}spacer-10);
+  width: 100%;
+}
+
+/* ** 로그인 방식 선택 ** */
+/* 로그인 옵션 */
+.login-opt-wrap {
+  display: flex;
+  gap: var(--#{$prefix}spacer-6);
+  .ico-info {
+    display: inline-flex;
+    align-self: center;
+    margin-left: var(--#{$prefix}spacer-1);
+  }
+}
+.certify-sel-wrap {
+  width: 100%;
+  .certify-opt-tit {
+    margin-top: var(--#{$prefix}spacer-6);
+    font-size: 2.5rem;
+    color: var(--#{$prefix}gray-90);
+    font-weight: map-get($fws, bold);
+  }
+  .certify-option {
+    $bdc: var(--#{$prefix}gray-30);
+    border-top: 1px solid $bdc;
+    > li {
+      @include flex-layout($ai: flex-start, $jc: space-between);
+      padding-top: var(--#{$prefix}spacer-6);
+      padding-bottom: var(--#{$prefix}spacer-6);
+      border-bottom: 1px solid $bdc;
+    }
+  }
+  .certify-type {
+    @include flex-size(0, 0);
+    display: flex;
+    flex-direction: column;
+    width: 64rem;
+    gap: var(--#{$prefix}spacer-4);
+    > li {
+      @include flex-layout($jc: flex-start);
+      flex-direction: column;
+      position: relative;
+      padding: var(--#{$prefix}spacer-8) var(--#{$prefix}spacer-8) var(--#{$prefix}spacer-8) var(--#{$prefix}spacer-22);
+      background-color: var(--#{$prefix}gray-5);
+      border: 1px solid var(--#{$prefix}gray-20);
+      border-radius: var(--#{$prefix}rd-12);
+      .login-link {
+        display: block;
+        width: 100%;
+        & + .btn-wrap {
+          margin-top: var(--#{$prefix}spacer-4);
+        }
+        &:focus {
+          @include focus($offset: 0.4rem);
+          border-radius: 0;
+        }
+      }
+      &::before,
+      &::after {
+        @include position($t: 3.2rem, $l: 3.2rem);
+        @include pseudo();
+        width: 3.2rem;
+        height: 3.2rem;
+        background-size: contain;
+      }
+      &::after {
+        @include position($t: 3.2rem, $l: auto, $r: 3.2rem);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(#{$url}/pattern/content/ico_login_certify_go.svg);
+      }
+      &.mobile {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_01.svg);
+        }
+      }
+      &.public {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_02.svg);
+        }
+      }
+      &.simplicity {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_03.svg);
+        }
+      }
+      &.sns {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_04.svg);
+        }
+      }
+      &.id {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_05.svg);
+        }
+      }
+      &.guest {
+        &::before {
+          background-image: url(#{$url}/pattern/content/ico_login_certify_type_06.svg);
+        }
+      }
+      .type-tit {
+        font-size: 2.5rem;
+        color: var(--#{$prefix}gray-90);
+        font-weight: map-get($fws, bold);
+      }
+      .type-desc {
+        margin-top: var(--#{$prefix}spacer-6);
+        padding-right: var(--#{$prefix}spacer-12);
+        color: var(--#{$prefix}gray-70);
+      }
+      .icon-arr {
+        margin-top: var(--#{$prefix}spacer-4);
+      }
+    }
+  }
+}
+/* 회원가입 유도 */
+.join-member-bn-wrap {
+  @include flex-layout($ai: center, $jc: flex-start);
+  gap: var(--#{$prefix}spacer-4);
+  color: var(--#{$prefix}gray-90);
+  .txt-desc {
+    @include flex-size(0, 0);
+    font-weight: map-get($fws, bold);
+  }
+}
+
+/* 도움말 박스 */
+.helper-box {
+  width: 100%;
+  padding: var(--#{$prefix}spacer-6);
+  background-color: var(--#{$prefix}secondary-5);
+  border: 1px solid var(--#{$prefix}gray-20);
+  border-radius: 0.6rem;
+  .helper-tit {
+    display: flex;
+    position: relative;
+    color: var(--#{$prefix}secondary);
+    font-weight: map-get($fws, bold);
+    &::before {
+      margin-right: var(--#{$prefix}spacer-1);
+      @include pseudo();
+      width: 2rem;
+      height: 2rem;
+      margin-top: var(--#{$prefix}spacer-default2);
+      background-image: url(#{$url}/pattern/content/ico_helper_info.svg);
+      background-size: contain;
+    }
+  }
+  .info-list {
+    > li {
+      & + li {
+        margin-top: var(--#{$prefix}spacer-2);
+      }
+    }
+  }
+  .helper-desc-wrap {
+    margin-top: var(--#{$prefix}spacer-5);
+    margin-left: var(--#{$prefix}spacer-6);
+    .info-list:first-child {
+      margin-top: 0;
+    }
+  }
+  &.refer {
+    padding: var(--#{$prefix}spacer-4);
+    background-color: var(--#{$prefix}gray-5);
+    .helper-tit {
+      color: var(--#{$prefix}gray-90);
+      &::before {
+        background-image: url(#{$url}/pattern/content/ico_helper_info_trans.svg);
+      }
+    }
+    .helper-desc-wrap {
+      margin-top: var(--#{$prefix}spacer-4);
+    }
+  }
+}
+.info-list {
+  .helper-box {
+    width: initial;
+    margin-left: calc(var(--#{$prefix}spacer-4) * -1);
+  }
+  > li {
+    > .helper-box {
+      margin-top: var(--#{$prefix}spacer-6);
+    }
+    .info-list {
+      > li {
+        > .helper-box {
+          margin-top: var(--#{$prefix}spacer-4);
+        }
+      }
+    }
+  }
+}
+
+/* ** 로그인 폼 ** */
+.login-form-area {
+  $bdc: var(--#{$prefix}gray-30);
+  display: flex;
+  width: 100%;
+  padding: var(--#{$prefix}spacer-10) var(--#{$prefix}spacer-15);
+  border-top: 1px solid $bdc;
+  border-bottom: 1px solid $bdc;
+  .login-wrap {
+    position: relative;
+    width: 49rem;
+    padding-right: var(--#{$prefix}spacer-10);
+    @at-root .link-group {
+      @include flex-layout($ai: center, $jc: center);
+      > li {
+        .btn {
+          &.btn-txt {
+            height: 4rem;
+            padding: 0 1rem;
+          }
+        }
+        & + li {
+          position: relative;
+          margin-left: var(--#{$prefix}spacer-2);
+          padding-left: calc(var(--#{$prefix}spacer-2) + 0.1rem);
+          &::before {
+            @include position($t: 50%, $l: 0);
+            @include pseudo();
+            width: 0.1rem;
+            height: 1.6rem;
+            background-color: var(--#{$prefix}gray-30);
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    &::after {
+      @include position($t: 0, $r: 0);
+      @include pseudo();
+      width: 0.1rem;
+      height: 100%;
+      background-color: $bdc;
+    }
+  }
+  .login-info-wrap {
+    width: 45rem;
+    padding: var(--#{$prefix}spacer-6) 0 var(--#{$prefix}spacer-6) var(--#{$prefix}spacer-10);
+  }
+  &.type-tab {
+    padding-left: var(--#{$prefix}spacer-20);
+    padding-right: var(--#{$prefix}spacer-20);
+    .login-wrap {
+      width: 50%;
+      padding-right: var(--#{$prefix}spacer-20);
+    }
+    .login-info-wrap {
+      @include flex-layout($fd: column);
+      gap: var(--#{$prefix}spacer-6);
+      width: 50%;
+      padding: 0 0 0 var(--#{$prefix}spacer-20);
+      .tit {
+        font-weight: map-get($fws, bold);
+      }
+      .btn-wrap {
+        @include flex-layout($fd: column);
+        .btn {
+          width: 100%;
+          &.btn-func {
+            justify-content: flex-start;
+          }
+        }
+        &.login-method {
+          gap: var(--#{$prefix}spacer-4);
+        }
+      }
+    }
+  }
+}
+
+/* ** 서비스 신청 상세 ** */
+.conts-area {
+  &.quick-nav-type {
+    @include flex-layout($jc: space-between, $fd: row);
+    gap: 0;
+    > .conts-detail-wrap {
+      @include flex-layout($fd: column);
+      gap: var(--#{$prefix}spacer-18);
+      width: 90.4rem;
+      .quick-nav-area {
+        width: 100%;
+      }
+    }
+    > .quick-nav-area {
+      @include flex-layout($fd: column);
+      gap: var(--#{$prefix}spacer-10);
+      @include position($p: sticky, $t: 24.4rem);
+      width: 29.6rem;
+      transition: $transition-base;
+      > * {
+        width: 100%;
+      }
+      .btn-wrap {
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+    .quick-nav-tab {
+      width: calc(100% + 3.2rem);
+      margin: 0 -1.6rem;
+      overflow: hidden;
+      [role='tablist'] {
+        padding-left: var(--#{$prefix}spacer-4);
+        padding-right: var(--#{$prefix}spacer-4);
+      }
+    }
+  }
+}
+.scroll-down {
+  .conts-area {
+    &.quick-nav-type {
+      > .quick-nav-area {
+        top: 6rem;
+      }
+    }
+  }
+}
+.quick-title-wrap {
+  .guide-txt {
+    padding: 0 0 var(--#{$prefix}spacer-4) 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: var(--#{$prefix}fz-title-xsm);
+  }
+}
+.sec-tit {
+  font-size: var(--#{$prefix}fz-title-xlg);
+  font-weight: map-get($fws, bold);
+}
+.quick-list {
+  li {
+    > a {
+      display: block;
+      position: relative;
+      padding: 0.7rem 0 0.7rem 2.6rem;
+      transition: $transition-base;
+      &.active {
+        background-color: var(--#{$prefix}secondary-5);
+        color: var(--#{$prefix}secondary);
+        font-weight: map-get($fws, bold);
+        &::before {
+          width: 0.4rem;
+          background-color: var(--#{$prefix}secondary);
+        }
+      }
+      &::before {
+        @include position($t: 0, $l: 0);
+        @include pseudo();
+        width: 0.2rem;
+        height: 100%;
+        background-color: var(--#{$prefix}secondary-10);
+        transition: $transition-base;
+      }
+      &:focus {
+        @include focus($offset: 0.4rem);
+      }
+    }
+  }
+}
+
+.btn-wrap {
+  .guide-txt {
+    padding: var(--#{$prefix}spacer-4) 0 0 0;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: center;
+  }
+}
+
+//contents depth guide
+.conts-wrap {
+  @include flex-layout($fd: column);
+  gap: var(--#{$prefix}spacer-18);
+  width: 100%;
+  color: var(--#{$prefix}gray-70);
+  &.scroll-check {
+    gap: 0;
+    .section-link {
+      + .section-link {
+        padding-top: var(--#{$prefix}spacer-16);
+      }
+    }
+  }
+  > * {
+    width: 100%;
+  }
+  .conts-wrap {
+    gap: var(--#{$prefix}spacer-10);
+    .conts-wrap {
+      gap: var(--#{$prefix}spacer-8);
+      .sec-tit {
+        font-size: var(--#{$prefix}fz-title-md);
+      }
+      .conts-wrap {
+        gap: var(--#{$prefix}spacer-6);
+        .sec-tit {
+          font-size: var(--#{$prefix}fz-title-sm);
+        }
+      }
+    }
+  }
+  .sec-tit {
+    color: var(--#{$prefix}gray-90);
+  }
+}
+//_button.scss에 추가
+.btn-txt {
+  &.ico-call {
+    &::before {
+      background-image: url(#{$url}/component/common/ico_call.svg);
+    }
+    &::after {
+      background-image: url(#{$url}/component/common/ico_call.svg);
+    }
+  }
+  &.ico-faq {
+    &::before {
+      background-image: url(#{$url}/component/common/ico_faq.svg);
+    }
+    &::after {
+      background-image: url(#{$url}/component/common/ico_faq.svg);
+    }
+  }
+}
+
+.calc-wrap {
+  .total-txt {
+    + .calc-list {
+      margin-top: var(--#{$prefix}spacer-3);
+      padding-top: var(--#{$prefix}spacer-3);
+      border-top: 1px dashed var(--#{$prefix}gray-40);
+    }
+  }
+}
+
+//컨텐츠 영역 확장 축소
+.conts-expand-area {
+  .expand-wrap {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    &::after {
+      @include position($b: 0, $l: 0);
+      @include pseudo();
+      width: 100%;
+      height: 6.2rem;
+      background: linear-gradient(180deg, transparent 0%, var(--#{$prefix}white) 100%);
+      @include visibility($v: visible);
+      z-index: 10;
+      transition: $transition-base;
+    }
+  }
+  .btn-conts-expand {
+    @include flex-layout($ai: center);
+    position: relative;
+    border-radius: 0;
+    &::after {
+      @include pseudo();
+      width: 2rem;
+      height: 2rem;
+      margin-left: var(--#{$prefix}spacer-1);
+      background: url(#{$url}/pattern/content/ico_arr_expand.svg) no-repeat center;
+      background-size: contain;
+      transition: $transition-base;
+      transform: rotate(0);
+    }
+  }
+  &.active {
+    .expand-wrap {
+      max-height: 1000vh !important;
+      transition: max-height 1.5s ease-in-out;
+      &::after {
+        @include visibility($v: hidden);
+      }
+    }
+    .btn-conts-expand {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  //step button style
+  &.step {
+    .expand-wrap {
+      max-height: 20.7rem;
+    }
+    .btn-conts-expand {
+      height: 4rem;
+      padding-left: 6.6rem;
+      &::before {
+        @include position($t: 50%, $l: 1.2rem);
+        @include pseudo();
+        width: 2.4rem;
+        height: 2.4rem;
+        background: var(--#{$prefix}secondary-10) url(#{$url}/pattern/content/ico_conts_expand.svg) no-repeat center;
+        background-size: 1.6rem;
+        border-radius: var(--#{$prefix}rd-full);
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &.txt-box {
+    padding-bottom: 0;
+    .expand-wrap {
+      max-height: 20rem;
+      &::after {
+        background: linear-gradient(180deg, transparent 0%, var(--#{$prefix}gray-5) 100%);
+      }
+    }
+    .btn-conts-expand {
+      justify-content: center;
+      width: 100%;
+      height: 6.2rem;
+      border-top: 1px solid var(--#{$prefix}gray-40);
+    }
+  }
+}
+
+.service-step {
+  > li {
+    @include flex-layout($fd: column);
+    gap: var(--#{$prefix}spacer-4);
+    position: relative;
+    padding-left: 6.6rem;
+    padding-bottom: var(--#{$prefix}spacer-6);
+    .num {
+      @include flex-layout($ai: center, $jc: center);
+      @include position($t: 0, $l: 1.2rem);
+      z-index: 2;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-color: var(--#{$prefix}secondary);
+      border-radius: var(--#{$prefix}rd-full);
+      color: var(--#{$prefix}white);
+    }
+    &::before {
+      @include position($t: 0, $l: 2.4rem);
+      @include pseudo();
+      width: 0.1rem;
+      height: 100%;
+      background-color: var(--#{$prefix}secondary-20);
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+      &::before {
+        display: none;
+      }
+    }
+    .tit-area {
+      display: flex;
+      width: 100%;
+      .tit {
+        color: var(--#{$prefix}secondary);
+        font-weight: map-get($fws, bold);
+      }
+      .period {
+        position: relative;
+        margin-left: var(--#{$prefix}spacer-2);
+        padding-left: calc(var(--#{$prefix}spacer-2) + 0.1rem);
+        &::before {
+          @include position($t: 50%, $l: 0);
+          @include pseudo();
+          width: 0.1rem;
+          height: 0.8rem;
+          background-color: var(--#{$prefix}gray-40);
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .conts-desc {
+      width: 100%;
+    }
+    .btn-txt {
+      &.sm {
+        height: auto;
+      }
+    }
+  }
+}
+
+.txt-box {
+  padding: var(--#{$prefix}spacer-10);
+  background-color: var(--#{$prefix}gray-5);
+  border: 1px solid var(--#{$prefix}gray-40);
+  border-radius: var(--#{$prefix}rd-12);
+  color: var(--#{$prefix}gray-90);
+  .conts-desc {
+    padding-bottom: var(--#{$prefix}spacer-6);
+  }
+}
+
+//box list style
+.box-group-area {
+  @include flex-layout($fd: column);
+  gap: var(--#{$prefix}spacer-4);
+  > li {
+    @include flex-layout($ai: center, $jc: space-between);
+    width: 100%;
+    min-height: 6.4rem;
+    padding: var(--#{$prefix}spacer-3) var(--#{$prefix}spacer-4);
+    border: 1px solid var(--#{$prefix}gray-40);
+    border-radius: 0.6rem;
+    color: var(--#{$prefix}gray-90);
+    .btn-wrap {
+      width: auto;
+      padding-left: var(--#{$prefix}spacer-6);
+    }
+  }
+}
+
+//버튼 모음 리스트
+.info-list {
+  &.btn-txt-list {
+    > li {
+      + li {
+        margin-top: var(--#{$prefix}spacer-6) !important;
+      }
+    }
+    .btn-txt {
+      &.sm {
+        height: auto;
+      }
+    }
+  }
+}
+
+//페이지 하단버튼 가이드문구 있을 때 (공통에 추가필요)
+.page-btn-wrap {
+  z-index: 10;
+  background-color: var(--#{$prefix}white);
+  &.guide {
+    flex-direction: column;
+    .btn {
+      flex: initial;
+    }
+    .guide-txt {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+      text-align: center;
+    }
+  }
+}
+
+//step layout (공통에 추가필요)
+.inner {
+  &.page-step {
+    position: relative;
+  }
+}
+.step-wrap {
+  @include flex-layout();
+  > li {
+    flex: 1;
+    position: relative;
+    font-size: var(--#{$prefix}fz-body-sm);
+    &::after {
+      @include position($t: 1rem, $l: 0);
+      @include pseudo();
+      width: 100%;
+      height: 0.1rem;
+      background-color: var(--#{$prefix}gray-40);
+    }
+    > span {
+      display: block;
+      position: relative;
+      padding-top: var(--#{$prefix}spacer-8);
+      padding-right: var(--#{$prefix}spacer-8);
+      &::before,
+      &::after {
+        @include pseudo();
+        border-radius: var(--#{$prefix}rd-full);
+      }
+      &::before {
+        @include position($t: 0, $l: 0);
+        z-index: 2;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--#{$prefix}gray-20);
+        border: 1px solid var(--#{$prefix}gray-20);
+      }
+    }
+    .step {
+      color: var(--#{$prefix}gray-70);
+    }
+    .step-tit {
+      font-weight: map-get($fws, bold);
+      white-space: nowrap;
+    }
+    &.done {
+      &::after {
+        background-color: var(--krds-secondary);
+      }
+      > span {
+        &::before {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin-top: 0.2rem;
+          border: 0;
+          background-color: var(--krds-secondary);
+        }
+        &::after {
+          @include position($t: 0.4rem, $l: 0.2rem);
+          z-index: 3;
+          width: 1.2rem;
+          height: 1.2rem;
+          background: url(#{$url}/component/common/ico_check_8.svg) no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+    &.active {
+      > span {
+        &::before {
+          background-color: var(--#{$prefix}white);
+          border-color: var(--#{$prefix}primary);
+        }
+        &::after {
+          @include position($t: 0.4rem, $l: 0.4rem);
+          z-index: 3;
+          width: 1.2rem;
+          height: 1.2rem;
+          background: var(--#{$prefix}primary) url(#{$url}/component/common/ico_step_active.svg) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+//page step 레이아웃
+.page-step {
+  //step depth guide
+  .conts-wrap {
+    .sec-tit {
+      font-size: var(--#{$prefix}fz-heading-sm);
+      .step-now {
+        display: block;
+        font-size: var(--#{$prefix}fz-body-md);
+        color: var(--#{$prefix}gray-70);
+        font-weight: map-get($fws, normal);
+        strong {
+          color: var(--#{$prefix}primary-60);
+          font-weight: map-get($fws, bold);
+        }
+      }
+    }
+  }
+}
+
+.outline {
+  @include flex-layout($fd: column);
+  gap: var(--#{$prefix}spacer-10);
+  .outline-tit {
+    @include flex-layout($ai: center);
+    gap: var(--#{$prefix}spacer-1);
+    font-size: var(--#{$prefix}fz-title-xlg);
+    font-weight: map-get($fws, bold);
+    &::before {
+      @include pseudo();
+      width: 3.2rem;
+      height: 3.2rem;
+      background: url(#{$url}/pattern/content/ico_outline.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
+  .outline-txt {
+    font-size: var(--#{$prefix}fz-body-lg);
+    color: var(--#{$prefix}gray-90);
+  }
+  .conts-desc-wrap {
+    width: 100%;
+    padding-top: var(--#{$prefix}spacer-10);
+    border-top: 1px dotted var(--#{$prefix}gray-40);
+  }
+  .check-list {
+    @include flex-layout($fd: column);
+    gap: var(--#{$prefix}spacer-4);
+    > li {
+      position: relative;
+      padding-left: var(--#{$prefix}spacer-8);
+      font-size: var(--#{$prefix}fz-body-lg);
+      color: var(--#{$prefix}primary-60);
+      &::before {
+        @include position($t: 0.4rem, $l: 0);
+        @include pseudo();
+        width: 1.6rem;
+        height: 1.6rem;
+        background: url(#{$url}/pattern/content/ico_outline_chk.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+    &.info {
+      > li {
+        padding-left: var(--#{$prefix}spacer-6);
+        font-size: var(--#{$prefix}fz-body-md);
+        color: var(--#{$prefix}primary-90);
+      }
+    }
+  }
+}
+.agree-box {
+  @include flex-layout($ai: center, $jc: center, $fd: column);
+  height: 6.4rem;
+  background-color: var(--#{$prefix}gray-10);
+  border-radius: var(--#{$prefix}rd-8);
+  .form-check {
+    text-align: center;
+    label {
+      color: var(--#{$prefix}gray-90);
+    }
+  }
+}
+
+//하단 버튼 양쪽정렬 (공통에 추가필요)
+.page-btn-wrap {
+  &.both {
+    justify-content: space-between;
+    .btn-wrap {
+      display: flex;
+      gap: var(--#{$prefix}spacer-4);
+      width: auto;
+    }
+  }
+  &.coach-highligt {
+    position: relative;
+    > .coach-balloon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--#{$prefix}white);
+    }
+  }
+}
+
+//pc only
+@include tabletMore {
+}
+
+//tablet size only
+@include tablet {
+  /* ** 서비스 신청 상세 ** */
+  .conts-area {
+    &.quick-nav-type {
+      > .conts-detail-wrap {
+        width: calc(100% - 29.6rem - 4rem);
+      }
+    }
+  }
+}
+
+//mobile and tablet
+@include tabletLess {
+}
+//mobile only
+@include mobile {
+  /* ** 로그인 방식 선택 ** */
+  .conts-area {
+    gap: var(--#{$prefix}spacer-8);
+  }
+  /* 로그인 옵션 */
+  .login-opt-wrap {
+    flex-direction: column;
+  }
+  .certify-sel-wrap {
+    .certify-opt-tit {
+      margin-top: 0;
+    }
+    .certify-option {
+      > li {
+        @include flex-layout($ai: flex-start, $jc: flex-start, $fd: column);
+        gap: var(--#{$prefix}spacer-8);
+        padding-top: var(--#{$prefix}spacer-8);
+        padding-bottom: var(--#{$prefix}spacer-8);
+      }
+    }
+    .certify-type {
+      width: 100%;
+      gap: var(--#{$prefix}spacer-2);
+      > li {
+        padding: var(--#{$prefix}spacer-6);
+        .login-link {
+          & + .btn-wrap {
+            margin-top: var(--#{$prefix}spacer-6);
+            padding-top: var(--#{$prefix}spacer-2);
+            border-top: 1px solid var(--#{$prefix}gray-30);
+          }
+        }
+        &::before,
+        &::after {
+          @include position($t: 2.4rem, $l: 2.4rem);
+        }
+        &::after {
+          @include position($t: 2.4rem, $l: auto, $r: 2.4rem);
+          width: 2.4rem;
+          height: 2.4rem;
+          background-image: url(#{$url}/pattern/content/ico_login_certify_go.svg);
+        }
+        .type-tit {
+          padding-left: var(--#{$prefix}spacer-12);
+          font-size: 2.1rem;
+        }
+        .type-desc {
+          margin-top: var(--#{$prefix}spacer-6);
+          color: var(--#{$prefix}gray-70);
+        }
+        .icon-arr {
+          margin-top: var(--#{$prefix}spacer-4);
+        }
+      }
+    }
+  }
+  /* 회원가입 유도 */
+  .join-member-bn-wrap {
+    flex-direction: column;
+    gap: var(--#{$prefix}spacer-4);
+  }
+  /* 도움말 박스 */
+  .helper-box {
+    padding: var(--#{$prefix}spacer-6) var(--#{$prefix}spacer-4);
+    .helper-desc-wrap {
+      margin-top: var(--#{$prefix}spacer-4);
+    }
+    .info-list {
+      > li {
+        & + li {
+          margin-top: var(--#{$prefix}spacer-1);
+        }
+      }
+    }
+  }
+
+  /* ** 로그인 폼 ** */
+  .login-form-area {
+    $bdc: var(--#{$prefix}gray-30);
+    flex-direction: column;
+    padding: var(--#{$prefix}spacer-8) 0;
+    .login-wrap {
+      width: 100%;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+    .login-info-wrap {
+      position: relative;
+      width: 100%;
+      margin-top: var(--#{$prefix}spacer-8);
+      padding: var(--#{$prefix}spacer-8) 0 0;
+      border-top: 1px solid $bdc;
+    }
+    &.type-tab {
+      padding-left: 0;
+      padding-right: 0;
+      .login-wrap {
+        width: 100%;
+        padding-right: 0;
+      }
+      .login-info-wrap {
+        width: 100%;
+        padding: var(--#{$prefix}spacer-12) 0 0 0;
+      }
+    }
+  }
+
+  /* ** 서비스 신청 상세 ** */
+  .conts-area {
+    &.quick-nav-type {
+      > .conts-detail-wrap {
+        gap: var(--#{$prefix}spacer-10);
+        width: 100%;
+      }
+    }
+  }
+
+  //contents depth guide
+  .conts-wrap {
+    gap: var(--#{$prefix}spacer-10);
+    &.scroll-check {
+      gap: 0;
+      .section-link {
+        + .section-link {
+          padding-top: var(--#{$prefix}spacer-10);
+        }
+      }
+    }
+    .conts-wrap {
+      gap: var(--#{$prefix}spacer-8);
+    }
+  }
+
+  //box list style
+  .box-group-area {
+    > li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--#{$prefix}spacer-4);
+      .btn-wrap {
+        width: 100%;
+        padding-left: 0;
+        text-align: left;
+        .btn-txt {
+          &.sm {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  //list형 checkbox
+  .chk-group-area {
+    .chk-all-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--#{$prefix}spacer-1);
+      .chk-num {
+        width: 100%;
+        text-align: right;
+      }
+    }
+    .chk-group-wrap {
+      @include flex-layout($fd: column);
+      gap: var(--#{$prefix}spacer-6);
+      > li {
+        padding: var(--#{$prefix}spacer-6) var(--#{$prefix}spacer-4) var(--#{$prefix}spacer-4);
+      }
+      $box-pl: 3.6rem;
+      input[type='radio'],
+      input[type='checkbox'] {
+        + label {
+          padding-left: $box-pl;
+        }
+      }
+      .btn-wrap {
+        margin-left: $box-pl;
+      }
+    }
+  }
+
+  .txt-box {
+    padding: var(--#{$prefix}spacer-6);
+    .outline {
+      padding: var(--#{$prefix}spacer-8) var(--#{$prefix}spacer-6);
+    }
+  }
+
+  //step layout (공통에 추가필요)
+  .step-wrap {
+    @include flex-layout();
+    @include group-wrap;
+    position: static;
+    margin-bottom: var(--#{$prefix}spacer-16);
+    > li {
+      @include equal-width;
+      > span {
+        padding-top: var(--#{$prefix}spacer-5);
+        padding-right: 0;
+        .step,
+        .step-tit {
+          @include sr-only();
+        }
+      }
+      &:last-child {
+        flex: none;
+        flex-basis: 2rem;
+      }
+    }
+  }
+
+  .outline {
+    gap: var(--#{$prefix}spacer-8);
+    .conts-desc-wrap {
+      padding-top: var(--#{$prefix}spacer-8);
+    }
+  }
+
+  .page-btn-wrap {
+    &.both {
+      .btn {
+        padding: 0 var(--krds-btn-px-xsm);
+        + .btn-wrap {
+          justify-content: flex-end;
+          flex: 2.4;
+        }
+      }
+      .btn-wrap {
+        @include group-wrap;
+        .btn {
+          @include equal-width;
+        }
+      }
+    }
+    &.coach-highligt {
+      > .coach-balloon {
+        top: 2.4rem;
+        right: 1.6rem;
+        width: 100%;
+        max-width: calc(100% - 3.2rem);
+        background-color: var(--#{$prefix}white);
+      }
+    }
+  }
+
+  .page-step {
+    .conts-wrap {
+      .conts-wrap {
+        .conts-wrap {
+          gap: var(--#{$prefix}spacer-6);
+        }
+      }
+    }
+  }
+
+  //완료페이지 버튼
+  .comp-btn-wrap {
+    @include group-wrap;
+    .btn {
+      @include group;
+      padding: 0;
+    }
+  }
+}

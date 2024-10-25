@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* ui/ux css */
+@import url('output/c_kds.css');
+@import url('output/c_initialize.css');
+@import url('output/c_components.css');
+@import url('output/c_forms.css');
+
+/* sample css */
+@import url('output/p_layout.css');
+@import url('output/p_common.css');
+@import url('output/p_content.css');

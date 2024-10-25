@@ -1,12 +1,9 @@
-@import "variables";
-@import "colors";
-// @import "fonts";
-// @import "root";
-@import "functions";
+//@use 'sass:map';
+//scss 공통영역 및 mixin 선언파일 모음
+/* 공통 */
+// Configuration
+@import 'variables';
+@import 'functions';
 
-@import "group_mixins";
-
-@import "reset";
-
-@import "group_components";
-@import "group_forms";
+//mixin
+@import 'group_mixins';

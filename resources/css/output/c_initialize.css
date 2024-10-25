@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* 공통 */
+/* 공통 */
+/* **** area mixin ****/
+/* **** text attr ****/
+/* **** scroll ****/
+/* **** form mixin ****/
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Pretendard GOV", sans-serif;
+  color: var(--krds-gray-90);
+  font-weight: 400;
+  line-height: 1.5;
+  word-break: keep-all;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--krds-fz-body-md);
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline-offset: -0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+::-moz-selection {
+  background: var(--krds-secondary);
+  color: var(--krds-white);
+}
+
+::selection {
+  background: #003675;
+  color: var(--krds-white);
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+a,
+button,
+select,
+ul,
+li,
+span,
+em,
+label,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: inherit;
+}
+
+pre {
+  font-family: inherit;
+}
+
+input,
+textarea,
+a,
+button,
+select,
+span,
+label,
+:before,
+:after {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 700;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+fieldset {
+  border: 0;
+}
+
+fieldset {
+  min-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em,
+address,
+i {
+  font-style: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  overflow: visible;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=file],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=search],
+textarea {
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+caption {
+  position: static !important;
+  margin: 0 !important;
+}
+
+table {
+  table-layout: fixed;
+  max-width: none;
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+.img img {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.img.bg-img {
+  background-size: cover;
+}
+
+.blind,
+hr,
+.sr-only,
+legend,
+caption {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.al {
+  text-align: left !important;
+}
+
+.ac {
+  text-align: center !important;
+}
+
+.ar {
+  text-align: right !important;
+}
+
+@media (max-width: 599px) {
+  .pc-only {
+    display: none !important;
+  }
+  .pc-only.read {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  .mob-line {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media (min-width: 600px) {
+  .mob-only {
+    display: none !important;
+  }
+  .mob-only.read {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  .pc-line {
+    display: block;
+    line-height: inherit;
+  }
+}/*# sourceMappingURL=c_initialize.css.map */
