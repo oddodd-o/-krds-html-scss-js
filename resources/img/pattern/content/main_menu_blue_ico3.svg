@@ -1,0 +1,6 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="duotone / document-check">
+<path id="tone" opacity="0.15" d="M8.33301 35H31.6663V15H24.9997C23.1587 15 21.6663 13.5076 21.6663 11.6667V5H8.33301V35Z" fill="#246BEB"/>
+<path id="shape" d="M24.9997 20L17.9997 26.6667L14.9997 23.8095M21.6663 5H8.33301V35H31.6663V15M21.6663 5H23.333L31.6663 13.3333V15M21.6663 5V11.6667C21.6663 13.3333 23.333 15 24.9997 15H31.6663" stroke="#246BEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

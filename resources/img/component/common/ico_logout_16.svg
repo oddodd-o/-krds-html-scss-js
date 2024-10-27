@@ -1,0 +1,12 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="live area">
+<g id="Rectangle 2419">
+<mask id="path-1-inside-1_3426_196668" fill="white">
+<path d="M6 12H1C0.447715 12 0 11.5523 0 11L0 1C0 0.447715 0.447715 0 1 0H6L6 12Z"/>
+</mask>
+<path d="M6 13H1C-0.104569 13 -1 12.1046 -1 11H1H6V13ZM-1 1C-1 -0.104569 -0.104569 -1 1 -1H6V1H1H-1ZM6 0L6 12L6 0ZM1 13C-0.104569 13 -1 12.1046 -1 11L-1 1C-1 -0.104569 -0.104569 -1 1 -1V1L1 11V13Z" fill="#2D2D2D" mask="url(#path-1-inside-1_3426_196668)"/>
+</g>
+<line id="Line 3" x1="3" y1="6" x2="11" y2="6" stroke="#2D2D2D"/>
+<path id="Vector 3" d="M8.5 3.5L11 6L8.5 8.5" stroke="#2D2D2D" stroke-width="0.95"/>
+</g>
+</svg>

@@ -653,7 +653,7 @@
 }
 .krds-badge.bg3 {
   color: var(--krds-success);
-  background-color: #e3f3e6;
+  background-color: #E3F3E6;
 }
 .krds-badge.bg4 {
   color: #ff0000;
@@ -711,7 +711,7 @@
 .popup-wrap[data-type=full] {
   gap: var(--krds-spacer-10);
   max-height: 100%;
-  background-color: #dee2e8;
+  background-color: #DEE2E8;
 }
 .popup-wrap[data-type=full] .popup-in {
   padding: var(--krds-spacer-20) 0;
@@ -1103,4 +1103,6 @@
     width: 2.4rem;
     height: 2.4rem;
   }
-}/*# sourceMappingURL=p_common.css.map */
+}
+
+/*# sourceMappingURL=p_common.css.map */

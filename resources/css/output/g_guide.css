@@ -50,7 +50,7 @@ body {
   width: 4.9rem;
   height: 4.9rem;
   margin-right: var(--krds-spacer-2);
-  background: url(../https://uiux.egovframe.go.kr/resources/img/guide/common/head_logo.svg) no-repeat center;
+  background: url(../../../resources/img/guide/common/head_logo.svg) no-repeat center;
   background-size: contain;
 }
 #g-wrap #g-header .inner .gnb {
@@ -126,7 +126,7 @@ body {
   right: 2.4rem;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../https://uiux.egovframe.go.kr/resources/img/component/common/ico_close_24.svg) no-repeat;
+  background: url(../../../resources/img/component/common/ico_close_24.svg) no-repeat;
   background-size: contain;
 }
 #g-wrap #g-container .g-aside .inner {
@@ -149,7 +149,7 @@ body {
   content: "";
   width: 2rem;
   height: 2rem;
-  background: url(../https://uiux.egovframe.go.kr/resources/img/guide/common/arr_lnb.svg) no-repeat;
+  background: url(../../../resources/img/guide/common/arr_lnb.svg) no-repeat;
   background-size: contain;
   transition: 0.4s ease-in-out;
   transform: translateY(-50%) rotate(-90deg);
@@ -192,7 +192,7 @@ body {
   content: "";
   width: 2rem;
   height: 2rem;
-  background: url(../https://uiux.egovframe.go.kr/resources/img/guide/common/arr_lnb.svg) no-repeat;
+  background: url(../../../resources/img/guide/common/arr_lnb.svg) no-repeat;
   background-size: contain;
   transition: 0.4s ease-in-out;
   transform: rotate(0deg);
@@ -294,7 +294,7 @@ body {
   content: "";
   width: 2rem;
   height: 2rem;
-  background: url(../https://uiux.egovframe.go.kr/resources/img/guide/common/arr_lnb.svg) no-repeat;
+  background: url(../../../resources/img/guide/common/arr_lnb.svg) no-repeat;
   background-size: contain;
   transform: translateX(-50%) rotate(180deg);
 }
@@ -326,7 +326,7 @@ body {
   			width: 7.2rem;
   			height: 2.4rem;
   			margin-right: var(--krds-spacer-2);
-  			background: url(../../../img/pattern/content/btm_ban_ico_flag.svg) no-repeat center;
+  			background: url(../../../resources/img/pattern/content/btm_ban_ico_flag.svg) no-repeat center;
   			background-size: contain;
   		}
   	}
@@ -398,7 +398,7 @@ body {
   content: "";
   width: 20rem;
   height: 20rem;
-  background: url(../https://uiux.egovframe.go.kr/resources/img/guide/contents/main/ico_error.svg) no-repeat center;
+  background: url(../../../resources/img/guide/contents/main/ico_error.svg) no-repeat center;
   background-size: contain;
   transform: translateX(-50%);
 }
@@ -439,7 +439,7 @@ body {
   width: 2.4rem;
   height: 1.6rem;
   margin-right: var(--krds-spacer-2);
-  background: url(../../../img/pattern/content/top_ban_ico_flag.svg) no-repeat center;
+  background: url(../../../resources/img/pattern/content/top_ban_ico_flag.svg) no-repeat center;
   background-size: contain;
 }
 #g-header-top .toggle-head .toggle-btn {
@@ -448,7 +448,7 @@ body {
   height: auto;
 }
 #g-header-top .toggle-head .toggle-btn::after {
-  background-image: url(../https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_down_blue.svg);
+  background-image: url(../../../resources/img/component/common/ico_arr_20_down_blue.svg);
   transition: 0.4s ease-in-out;
 }
 #g-header-top .toggle-head.active .toggle-btn::after {
@@ -833,7 +833,7 @@ body {
 }
 
 .helper-box.advice {
-  background-color: #faedeb;
+  background-color: #FAEDEB;
 }
 .helper-box.advice .helper-tit {
   color: var(--krds-gray-90);
@@ -845,8 +845,7 @@ body {
 .grid-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  -moz-column-gap: 3.2rem;
-       column-gap: 3.2rem;
+  column-gap: 3.2rem;
   row-gap: 2.4rem;
   align-items: stretch;
 }
@@ -1234,7 +1233,7 @@ body {
 }
 
 .guide-tbl th {
-  background-color: #e4e4e4;
+  background-color: #E4E4E4;
 }
 
 .guide-tbl th,
@@ -1242,7 +1241,7 @@ body {
   font-size: 1.8rem;
   height: 5.2rem;
   padding: 1.2rem 1rem;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #D8D8D8;
 }
 
 .guide-tbl .review {
@@ -1265,7 +1264,7 @@ body {
 
 @media (min-width: 600px) {
   .guide-tbl tr.hr td {
-    border-top: 2px solid #8e8e8e;
+    border-top: 2px solid #8E8E8E;
   }
 }
 @media (max-width: 599px) {
@@ -1539,8 +1538,7 @@ body {
   }
   .grid-wrap {
     grid-template-columns: repeat(1, 1fr);
-    -moz-column-gap: 2.4rem;
-         column-gap: 2.4rem;
+    column-gap: 2.4rem;
   }
   .grid-wrap > div {
     padding: 2.4rem;
@@ -1594,4 +1592,6 @@ body {
   .g-conts-area .helper-box .bn-img img {
     height: auto;
   }
-}/*# sourceMappingURL=g_guide.css.map */
+}
+
+/*# sourceMappingURL=g_guide.css.map */

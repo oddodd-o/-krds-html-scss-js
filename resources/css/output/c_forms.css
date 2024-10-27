@@ -373,9 +373,6 @@ textarea.form-control {
   justify-content: flex-start;
   flex-direction: column;
 }
-.textarea-wrap .form-control:-moz-placeholder-shown {
-  -webkit-box-orient: inherit;
-}
 .textarea-wrap .form-control:placeholder-shown {
   -webkit-box-orient: inherit;
 }
@@ -420,14 +417,6 @@ input[type=text]::-ms-clear {
 
 .form-control::-ms-input-placeholder {
   color: var(--krds-gray-50);
-}
-
-.form-control:-moz-placeholder-shown {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
 }
 
 .form-control:placeholder-shown {
@@ -1052,8 +1041,7 @@ input[type=checkbox] {
 .datepicker-wrap .datepicker-body .sel.month {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 1.2rem;
-       column-gap: 1.2rem;
+  column-gap: 1.2rem;
   row-gap: 0.8rem;
 }
 .datepicker-wrap .datepicker-body .sel.month > li {
@@ -1131,4 +1119,6 @@ input[type=checkbox] {
   .datepicker-year-wrap::-webkit-scrollbar-track {
     background-color: var(--krds-gray-30);
   }
-}/*# sourceMappingURL=c_forms.css.map */
+}
+
+/*# sourceMappingURL=c_forms.css.map */

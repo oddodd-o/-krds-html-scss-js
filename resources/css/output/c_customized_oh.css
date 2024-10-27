@@ -4,7 +4,6 @@
 /* **** area mixin ****/
 /* **** text attr ****/
 /* **** scroll ****/
-/* **** form mixin ****/
 /* **** guide css **** */
 #g-wrap {
   display: flex;
@@ -109,4 +108,6 @@
 .g-example-box .g-example > div {
   display: flex;
   align-items: center;
-}/*# sourceMappingURL=c_customized_oh.css.map */
+}
+
+/*# sourceMappingURL=c_customized_oh.css.map */

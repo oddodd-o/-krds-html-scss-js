@@ -3,7 +3,6 @@
 /* **** area mixin ****/
 /* **** text attr ****/
 /* **** scroll ****/
-/* **** form mixin ****/
 /* ***** CONTENT ***** */
 .conts-area {
   display: flex;
@@ -1114,4 +1113,6 @@
     min-width: 0;
     padding: 0;
   }
-}/*# sourceMappingURL=p_content1.css.map */
+}
+
+/*# sourceMappingURL=p_content1.css.map */
