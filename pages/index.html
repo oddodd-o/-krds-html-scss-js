@@ -83,7 +83,7 @@
     ></script>
     <script
       defer
-      src="../resources/js/include.js"
+      src="../resources/js/component/ui-script.js"
     ></script>
   </head>
   <body>
@@ -1621,17 +1621,132 @@
           <!-- //웹 : 메뉴 영역 -->
         </div>
       </header>
+      <main id="container">
+        <div class="inner">컨텐츠 영역</div>
+      </main>
+      <footer id="footer">
+        <div class="foot-quick">
+          <div class="inner">
+            <button
+              type="button"
+              class="link"
+              title="소속기관(지청 및 위원회) 레이어"
+            >
+              소속기관(지청 및 위원회)
+            </button>
+            <button
+              type="button"
+              class="link"
+              title="업무별 누리집 레이어"
+            >
+              업무별 누리집
+            </button>
+            <button
+              type="button"
+              class="link"
+              title="산하기관 및 관련단체 레이어"
+            >
+              산하기관 및 관련단체
+            </button>
+            <button
+              type="button"
+              class="link"
+              title="정부기관 레이어"
+            >
+              정부기관
+            </button>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="f-logo">
+            <img
+              src="../../resources/img/pattern/layout/head_logo.svg"
+              class="logo-im"
+              alt="대한민국정부"
+            />
+          </div>
+          <div class="f-cnt">
+            <div class="f-info">
+              <p class="info-addr">(26464) 강원특별자치도 원주시 건강로 32(반곡동) 국민건강보험공단</p>
+              <ul class="info-cs">
+                <li><strong class="strong">대표전화 1577-1000</strong><span class="span">(유료, 평일 09시~18시)</span></li>
+                <li><strong class="strong">해외이용 82-33-811-2001</strong><span class="span">(유료, 평일 09시~18시)</span></li>
+              </ul>
+            </div>
 
-      <div class="intro">intro</div>
-      <main id="container">content</main>
-      <footer
-        id="footer"
-        include-html="./layout/footer.html"
-      ></footer>
+            <div class="f-link">
+              <div class="link-go">
+                <a
+                  href="#"
+                  class="btn btn-txt sm ico-arr"
+                  >찾아오시는 길</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-txt sm ico-arr"
+                  >이용안내</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-txt sm ico-arr"
+                  >직원검색</a
+                >
+              </div>
+              <div class="link-sns">
+                <a
+                  href="#"
+                  class="instagram"
+                  target="_blank"
+                  ><span class="sr-only">인스타그램</span></a
+                >
+                <a
+                  href="#"
+                  class="youtube"
+                  target="_blank"
+                  ><span class="sr-only">유튜브</span></a
+                >
+                <a
+                  href="#"
+                  class="twitter"
+                  target="_blank"
+                  ><span class="sr-only">트위터</span></a
+                >
+                <a
+                  href="#"
+                  class="facebook"
+                  target="_blank"
+                  ><span class="sr-only">페이스북</span></a
+                >
+                <a
+                  href="#"
+                  class="blog"
+                  target="_blank"
+                  ><span class="sr-only">블로그</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="f-btm">
+            <div class="f-btm-text">
+              <div class="f-menu">
+                <a
+                  href="#"
+                  class="point"
+                  >개인정보처리방침</a
+                >
+                <a href="#">저작권 정책</a>
+                <a href="#">웹 접근성 품질인증 마크 획득</a>
+              </div>
+              <p class="f-copy">© Ministry of Education. All rights reserved.</p>
+            </div>
+            <div class="f-btm-ban">
+              <span class="sr-only">보건복지부</span>
+              <span class="ban-txt">이 누리집은 보건복지부 산하기관 누리집입니다.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <script src="../resources/js/pattern/jquery.min.js"></script>
-    <script src="../resources/js/pattern/ui-pattern-script.js"></script>
-    <script src="../resources/js/component/ui-script.js"></script>
   </body>
 </html>
